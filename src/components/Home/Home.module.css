@@ -1,0 +1,45 @@
+.home {
+  width: 90%;
+  max-width: 40rem;
+  padding: 3rem;
+  margin: 2rem auto;
+  text-align: center;
+}
+.DashboardContentFlex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 2rem auto;
+  padding: 3rem;
+  width: 100%;
+  gap:30px;
+  max-width: 60rem;
+}
+
+.history{
+  width: 400px;
+  height: 400px;
+  background-color: rgb(223, 215, 222);
+  text-align: center;
+}
+
+.appointment{
+  width: 400px;
+  height: 400px;
+  background-color: rgb(175, 173, 175);
+  text-align: center;
+}
+
+.Prescription{
+  width: 400px;
+  height: 400px;
+  background-color: rgb(175, 173, 175);
+  text-align: center;
+}
+
+.information{
+  width: 400px;
+  height: 400px;
+  background-color: rgb(223, 215, 222);
+  text-align: center;
+}
