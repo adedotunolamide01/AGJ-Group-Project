@@ -1,7 +1,7 @@
 const AppointmentView = () => {
   return (
     <div className="appointment-home">
-      <p>Your next appointment is ...</p>
+      <p>Your next appointment is ...date</p>
     </div>
   );
 };
