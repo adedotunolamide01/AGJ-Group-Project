@@ -7,16 +7,44 @@ const Navigation = (props) => {
     <nav className={classes.nav}>
       <ul>
         {props.isLoggedIn && (
-          <Link to="/">
+          <Link to="./frontpage">
             <li>
-              <a href="/">Patient</a>
+              <a href="./frontpage">Home</a>
             </li>
           </Link>
         )}
         {props.isLoggedIn && (
-          <Link to="./page/doctorpage">
+          <Link to="/">
             <li>
-              <a href="/">Doctor</a>
+              <a href="/">Medical History</a>
+            </li>
+          </Link>
+        )}
+        {props.isLoggedIn && (
+          <Link to="./">
+            <li>
+              <a href="./">Appointment</a>
+            </li>
+          </Link>
+        )}
+        {props.isLoggedIn && (
+          <Link to="./">
+            <li>
+              <a href="./">Prescription</a>
+            </li>
+          </Link>
+        )}
+        {props.isLoggedIn && (
+          <Link to="./">
+            <li>
+              <a href="./">Health Info.</a>
+            </li>
+          </Link>
+        )}
+        {props.isLoggedIn && (
+          <Link to="./doctorpage">
+            <li>
+              <a href="./doctorpage">Doctor</a>
             </li>
           </Link>
         )}
