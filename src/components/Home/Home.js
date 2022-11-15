@@ -10,10 +10,10 @@ const Home = (props) => {
       </Card>
       <div className={classes.DashboardContentFlex}>
         <Card className={classes.history}>
-          <h1>Track Medical History</h1>
+          <h1>Medical History</h1>
         </Card>
         <Card className={classes.appointment}>
-          <h1>View next appointment</h1>
+          <h1>Next appointment</h1>
         </Card>
         <Card className={classes.Prescription}>
           <h1>View Prescription</h1>
