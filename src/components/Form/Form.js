@@ -3,7 +3,7 @@ import bgImg from './regImg.jpg';
 import './Form.css';
 import {useState} from "react";
 
-export default function Form() {
+const  Form = () => {
   const [fullName, setfullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,7 +15,7 @@ export default function Form() {
 
   const handleSubmit = (e) => {
   e.preventDefault();
-  const registrationData = {fullName, email, password, age, bloodGroup, address, phoneNumber, user};
+  const registrationData = { fullName, email, password, age, bloodGroup, address, phoneNumber, user};
 
   fetch( "http://localhost:8000/regData", {
     method: "POST",
@@ -52,3 +52,5 @@ export default function Form() {
   </section>
   )
 }
+
+export default Form;
