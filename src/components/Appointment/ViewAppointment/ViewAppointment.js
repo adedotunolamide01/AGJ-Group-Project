@@ -27,15 +27,6 @@ const ViewAppointment = () => {
   ]);
   return (
     <div className="appointment-home">
-      {/* <div>
-        <button onClick={() => setIsOpen(true)}>open pop up</button>
-        {isOpen && (
-          <div>
-            <div>There is no new appointment</div>
-            <button onClick={() => setIsOpen(false)}>close pop up</button>
-          </div>
-        )}
-      </div> */}
       <div className="appointment-display">
         <p className="appointment-display-text">No appointment information</p>
         <div className="appointment-close-btn">
