@@ -136,3 +136,7 @@ code {
   border-radius: 8px;
   cursor: pointer;
 }
+
+.doctorForm {
+  margin-top: 130px;
+}
