@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import AppointmentHome from "./components/Appointment/AppointmentHomePage/AppointmentHomePage";
-import BookAppointment from "./components/Appointment/BookAppointment.js/BookAppointment";
-import ViewAppointment from "./components/Appointment/ViewAppointment.js/ViewAppointment";
+import BookAppointment from "./components/Appointment/BookAppointment/BookAppointment";
+import ViewAppointment from "./components/Appointment/ViewAppointment/ViewAppointment";
 import Doctorpage from "./components/Page/Doctorpage";
 import Frontpage from "./components/Page/FrontPage";
 
