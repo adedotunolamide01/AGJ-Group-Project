@@ -14,9 +14,7 @@ const BookAppointment = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(datas),
     }).then(() => {
-      alert(
-        "Your booking has been sent successfully, please wait for confirmation."
-      );
+      alert("Your booking has been sent successfully.");
     });
 
     setReason("");

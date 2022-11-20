@@ -14,30 +14,8 @@ const ViewAppointment = () => {
       });
   }, []);
 
-  const [appHistory, setAppHistory] = useState([
-    {
-      date: "04 / 11 / 2021",
-      Consultant: "Dr. Tobi",
-      id: 1,
-    },
-    {
-      date: "06 / 27 / 2021",
-      Consultant: "Dr. Sam",
-      id: 2,
-    },
-    {
-      date: "02 / 18 / 2022",
-      Consultant: "Dr. Shane",
-      id: 3,
-    },
-    {
-      date: "08 / 30 / 2022",
-      Consultant: "Rema RGN",
-      id: 4,
-    },
-  ]);
   return (
-    <div className="appointment-home">
+    <div className="appointment-display-home">
       <div className="appointment-display">
         {fetchedData.map((data) => {
           const savedApptDate = new Date(data.apptDate);
