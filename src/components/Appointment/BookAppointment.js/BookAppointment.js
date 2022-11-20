@@ -4,16 +4,23 @@ import "./BookAppointment.css";
 
 const BookAppointment = () => {
   const [reason, setReason] = useState("");
-  const [date, setDate] = useState("");
+  const [apptDate, setApptDate] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const datas = { reason, apptDate };
+    fetch(`http://localhost:8000/datas`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(datas),
+    }).then(() => {
+      alert(
+        "Your booking has been sent successfully, please wait for confirmation."
+      );
+    });
 
-    alert(
-      "Your booking has been sent successfully, please wait for confirmation."
-    );
     setReason("");
-    setDate("");
+    setApptDate("");
   };
 
   return (
@@ -27,6 +34,7 @@ const BookAppointment = () => {
           name="reason"
           value={reason}
           onChange={(e) => setReason(e.target.value)}
+          placeholder="state your reason for appointment..."
           required
         ></textarea>
 
@@ -34,8 +42,8 @@ const BookAppointment = () => {
         <input
           type="date"
           name="date:"
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
+          value={apptDate}
+          onChange={(e) => setApptDate(e.target.value)}
           required
         />
 
