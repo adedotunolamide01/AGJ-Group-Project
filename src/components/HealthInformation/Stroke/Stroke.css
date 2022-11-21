@@ -1,0 +1,95 @@
+.stroke-container {
+  margin: 2rem;
+}
+
+.stroke-definition {
+  margin: 2rem 0;
+}
+
+.definition-info {
+  padding: 1rem 0;
+}
+
+.stroke-img {
+  width: 100%;
+  height: 80vh;
+  padding-top: 1rem;
+}
+
+.cause-heading {
+  padding: 1rem 0;
+}
+
+.cause-section {
+  padding: 1rem 0;
+}
+
+.cause-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.cause-img {
+  height: 30vh;
+  width: 100%;
+}
+
+.cause-hemorrhagic {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.symptoms-heading {
+  padding: 1rem 0;
+}
+
+.symptoms-info {
+  padding-bottom: 1rem;
+}
+
+.see-doctor {
+  padding: 2rem 0 1rem 0;
+}
+
+.see-doctor-info {
+  padding-bottom: 1rem;
+}
+
+.see-doctor-fast {
+  padding: 1rem 0;
+}
+
+.stroke-button {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem 0;
+}
+
+.learn-btn {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  background-color: rgb(29, 151, 117);
+  color: white;
+  border: 1px solid rgb(29, 151, 117);
+  width: 100%;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  background-color: rgb(29, 151, 117);
+  color: white;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.stroke-back-svg {
+  fill: white;
+  width: 1rem;
+}
