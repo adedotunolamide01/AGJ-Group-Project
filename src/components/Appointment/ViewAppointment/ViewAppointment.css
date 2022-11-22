@@ -17,6 +17,10 @@ p {
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
+.appointment-display-text {
+  padding: 0.5rem 0;
+}
+
 .appointment-close-btn {
   display: flex;
   justify-content: flex-end;

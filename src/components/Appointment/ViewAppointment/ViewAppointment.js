@@ -20,7 +20,7 @@ const ViewAppointment = () => {
         {fetchedData.map((data) => {
           const savedApptDate = new Date(data.apptDate);
           const currentDate = new Date();
-          if (savedApptDate.getTime() > currentDate.getTime()) {
+          if (savedApptDate.getTime() >= currentDate.getTime()) {
             return (
               <p className="appointment-display-text">
                 Your next appointment is {data.apptDate}
