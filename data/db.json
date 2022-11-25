@@ -2,31 +2,30 @@
   "datas": [
     {
       "date": "2022-10-07T00:00",
-      "complain": "could not sleep everywell",
-      "diagnose": "eat fresh fruit",
-      "treatment": "take a cup of milk",
+      "complain": "Chills ,Feverish ,Abominal Pain and Difficult in breathing",
+      "assement": "Upper respiratory tract infection (URTI)Malaria",
+      "issue": "malaria",
+      "status": "Close",
+      "treatment": "to do malarial parasite test Tablet Arthermeter 80/480 1",
       "id": 1
     },
     {
-      "date": "2022-10-07T00:00",
-      "Complain": "could not sleep everywell",
-      "diagnose": "eat fresh fruit",
-      "treatment": "take a cup of milk",
+      "date": "2022-11-17T09:26",
+      "complain": "Chills, Feverish,  Abdominal pain,  Difficulty in breathing.",
+      "assement": "Upper respiratory tract infection (URTI) Malaria ",
+      "issue": "malaria",
+      "status": "Pending",
+      "treatment": "Tablet Arthermeter 80/480 1-1\nTablet vitamin B-complex  1 daily \nTablet paracetamol 2-2-2",
       "id": 2
     },
     {
-      "date": "2022-11-10T20:26",
-      "complain": "head",
-      "diagnose": "good like ",
-      "treatment": "drink water",
+      "date": "2022-11-25T12:52",
+      "complain": "Chills, Feverish,  Abdominal pain,  Difficulty in breathing.",
+      "assement": "Upper respiratory tract infection (URTI) Malaria ",
+      "issue": "malaria",
+      "treatment": "gfhgbf",
+      "reset": "",
       "id": 3
-    },
-    {
-      "date": "2022-11-13T21:20",
-      "complain": "qsunday",
-      "diagnose": "gooo",
-      "treatment": "drink water",
-      "id": 4
     }
   ]
 }

@@ -1,7 +1,7 @@
-import Historylist from "./historylist";
+import Prescriptionlist from "../ListHistory/Prescriptionlist ";
 import useFetch from "../Fetch/useFetch";
 
-const History = () => {
+const Prescription = () => {
   const {
     data: datas,
     isPending,
@@ -11,9 +11,9 @@ const History = () => {
     <div className="home">
       {error && <div>{error}</div>}
       {isPending && <div>loading ...</div>}
-      {datas && <Historylist datas={datas} />}
+      {datas && <Prescriptionlist datas={datas} />}
     </div>
   );
 };
 
-export default History;
+export default Prescription;

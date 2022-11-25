@@ -1,6 +1,6 @@
 import React from "react";
 import "./historylist.css";
-const Historylist = ({
+const Prescriptionlist = ({
   datas,
   date,
   complain,
@@ -11,16 +11,15 @@ const Historylist = ({
 }) => {
   return (
     <div className="phistory">
-      <h2>Medical History</h2>
+      <h2>Presciption History</h2>
       {datas.map((list) => (
         <div className="blog-preview" key={list.id}>
           <h2>Date: {list.date}</h2>
-          {<p>Complain: {list.complain}</p>}
-          {<p>Status: {list.status}</p>}
+          {<p> {list.treatment}</p>}
         </div>
       ))}
     </div>
   );
 };
 
-export default Historylist;
+export default Prescriptionlist;
