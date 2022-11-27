@@ -1,0 +1,22 @@
+.history-details h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 10px;
+}
+.history-details div {
+  margin: 20px 0;
+}
+.history-details button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.history-details {
+  max-width: 1200px;
+  margin: 90px auto;
+  text-align: center;
+}
