@@ -8,14 +8,14 @@ const Doctornav = (props) => {
       <h1>Health Management App</h1>
       <nav className="nav">
         <ul>
-          <Link to="./">
+          <Link to="../">
             <li>
-              <a href="./">Home</a>
+              <a href="../frontpage">Home</a>
             </li>
           </Link>
-          <Link to="./">
+          <Link to="../medicalhistory">
             <li>
-              <a href="./">Medical History</a>
+              <a href="../medicalhistory">Medical History</a>
             </li>
           </Link>
           <Link to="./">
@@ -23,14 +23,14 @@ const Doctornav = (props) => {
               <a href="./">Appointment</a>
             </li>
           </Link>
-          <Link to="./">
+          <Link to="../prescription">
             <li>
-              <a href="./">Prescription</a>
+              <a href="../Prescription">Prescription</a>
             </li>
           </Link>
-          <Link to="./doctorpage">
+          <Link to="/">
             <li>
-              <a href="./doctorpage">Doctor</a>
+              <a href="/">Health Info.</a>
             </li>
           </Link>
 

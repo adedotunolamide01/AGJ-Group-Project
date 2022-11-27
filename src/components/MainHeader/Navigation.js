@@ -14,9 +14,9 @@ const Navigation = (props) => {
           </Link>
         )}
         {props.isLoggedIn && (
-          <Link to="/">
+          <Link to="./medicalhistory">
             <li>
-              <a href="/">Medical History</a>
+              <a href="../medicalhistory">Medical History</a>
             </li>
           </Link>
         )}
@@ -28,9 +28,9 @@ const Navigation = (props) => {
           </Link>
         )}
         {props.isLoggedIn && (
-          <Link to="./">
+          <Link to="./prescription">
             <li>
-              <a href="./">Prescription</a>
+              <a href="./prescription">Prescription</a>
             </li>
           </Link>
         )}
