@@ -21,12 +21,6 @@ p {
   padding: 0.5rem 0;
 }
 
-.appointment-close-btn {
-  display: flex;
-  justify-content: flex-end;
-  margin: 5rem 2rem 0 0;
-}
-
 .close-btn {
   background-color: rgb(99, 230, 190);
   color: white;
@@ -39,4 +33,18 @@ p {
 
 .appointment-history-heading {
   margin: 2rem 0 1rem 0;
+}
+
+span {
+  margin-left: 2rem;
+}
+
+.book-btn {
+  margin: 1rem 0;
+}
+
+.back-button {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5rem;
 }
