@@ -7,9 +7,9 @@ const Navigation = (props) => {
     <nav className={classes.nav}>
       <ul>
         {props.isLoggedIn && (
-          <Link to="./frontpage">
+          <Link to="./">
             <li>
-              <a href="./frontpage">Home</a>
+              <a href="./">Home</a>
             </li>
           </Link>
         )}
