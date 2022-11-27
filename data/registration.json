@@ -1,7 +1,27 @@
 {
-    "regData": [
-      {
-        
-      }
-     ]
+  "reg": [
+    {
+      "fullName": "Adedotun Olamide Toyese",
+      "email": "adedotunolamide@yahoo.com",
+      "password": "dmdmdkj",
+      "age": "23",
+      "bloodGroup": "0",
+      "address": "Carrer d 'angel Guimera 31 08923 Santa Coloma de Gramene",
+      "phoneNumber": "657056682",
+      "user": "Doctor",
+      "id": 1
+    },
+
+    {
+      "fullName": "awwef",
+      "email": "adedotunolamide@yahoo.com",
+      "password": "ghyjkjnfh",
+      "age": "28",
+      "bloodGroup": "0",
+      "address": "Carrer d 'angel Guimera 31 08923 Santa Coloma de Gramene",
+      "phoneNumber": "657056682",
+      "user": "Doctor",
+      "id": 2
+    }
+  ]
 }
