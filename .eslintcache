@@ -1,1 +1,203 @@
-[{"C:\\Users\\adedo\\Desktop\\Jag Home Page\\src\\index.js":"1","C:\\Users\\adedo\\Desktop\\Jag Home Page\\src\\App.js":"2","C:\\Users\\adedo\\Desktop\\Jag Home Page\\src\\components\\Home\\Home.js":"3","C:\\Users\\adedo\\Desktop\\Jag Home Page\\src\\components\\MainHeader\\MainHeader.js":"4","C:\\Users\\adedo\\Desktop\\Jag Home Page\\src\\components\\Login\\Login.js":"5","C:\\Users\\adedo\\Desktop\\Jag Home Page\\src\\components\\MainHeader\\Navigation.js":"6","C:\\Users\\adedo\\Desktop\\Jag Home Page\\src\\components\\UI\\Button\\Button.js":"7","C:\\Users\\adedo\\Desktop\\Jag Home Page\\src\\components\\UI\\Card\\Card.js":"8","C:\\Users\\adedo\\Desktop\\Jag Home Page\\src\\components\\Page\\FrontPage.js":"9","C:\\Users\\adedo\\Desktop\\Jag Home Page\\src\\components\\Page\\Doctorpage.js":"10","C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\index.js":"11","C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\App.js":"12","C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\Page\\FrontPage.js":"13","C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\Login\\Login.js":"14","C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\MainHeader\\MainHeader.js":"15","C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\MainHeader\\Navigation.js":"16","C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\Home\\Home.js":"17","C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\UI\\Card\\Card.js":"18","C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\UI\\Button\\Button.js":"19","C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\Navbar\\Doctornav.js":"20","C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\ListHistory\\Doctorhistory.js":"21","C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\Fetch\\useFetch.js":"22","C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\Page\\MedicalHistory.js":"23","C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\ListHistory\\History.js":"24","C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\ListHistory\\historylist.js":"25","C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\Page\\PrescriptionPage.js":"26","C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\ListHistory\\Prescription.js":"27","C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\ListHistory\\Prescriptionlist .js":"28","C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\Page\\Doctorpage.js":"29","C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\ListHistory\\HistoryDetails.js":"30"},{"size":206,"mtime":1668281532000,"results":"31","hashOfConfig":"32"},{"size":322,"mtime":1668448428121,"results":"33","hashOfConfig":"32"},{"size":748,"mtime":1668367283301,"results":"34","hashOfConfig":"32"},{"size":396,"mtime":1668369760528,"results":"35","hashOfConfig":"32"},{"size":2517,"mtime":1668327918000,"results":"36","hashOfConfig":"32"},{"size":726,"mtime":1668448206715,"results":"37","hashOfConfig":"32"},{"size":353,"mtime":1668281532000,"results":"38","hashOfConfig":"32"},{"size":218,"mtime":1668281532000,"results":"39","hashOfConfig":"32"},{"size":1112,"mtime":1668373137622,"results":"40","hashOfConfig":"32"},{"size":1796,"mtime":1668369566282,"results":"41","hashOfConfig":"32"},{"size":206,"mtime":1668281532000,"results":"42","hashOfConfig":"43"},{"size":835,"mtime":1669498306297,"results":"44","hashOfConfig":"43"},{"size":1112,"mtime":1668373137622,"results":"45","hashOfConfig":"43"},{"size":2517,"mtime":1668327918000,"results":"46","hashOfConfig":"43"},{"size":396,"mtime":1668369760528,"results":"47","hashOfConfig":"43"},{"size":1460,"mtime":1668557309977,"results":"48","hashOfConfig":"43"},{"size":1137,"mtime":1668557260441,"results":"49","hashOfConfig":"43"},{"size":218,"mtime":1668281532000,"results":"50","hashOfConfig":"43"},{"size":353,"mtime":1668281532000,"results":"51","hashOfConfig":"43"},{"size":1130,"mtime":1668618234086,"results":"52","hashOfConfig":"43"},{"size":2409,"mtime":1669476724401,"results":"53","hashOfConfig":"43"},{"size":722,"mtime":1666858893682,"results":"54","hashOfConfig":"43"},{"size":475,"mtime":1669385842515,"results":"55","hashOfConfig":"43"},{"size":436,"mtime":1669496119359,"results":"56","hashOfConfig":"43"},{"size":647,"mtime":1669498367602,"results":"57","hashOfConfig":"43"},{"size":494,"mtime":1668556771204,"results":"58","hashOfConfig":"43"},{"size":475,"mtime":1668556888346,"results":"59","hashOfConfig":"43"},{"size":500,"mtime":1668557064847,"results":"60","hashOfConfig":"43"},{"size":5085,"mtime":1669477859947,"results":"61","hashOfConfig":"43"},{"size":1013,"mtime":1669499339696,"results":"62","hashOfConfig":"43"},{"filePath":"63","messages":"64","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"65"},"hv7w1d",{"filePath":"66","messages":"67","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},{"filePath":"68","messages":"69","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"65"},{"filePath":"70","messages":"71","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"65"},{"filePath":"72","messages":"73","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"65"},{"filePath":"74","messages":"75","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},{"filePath":"76","messages":"77","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"65"},{"filePath":"78","messages":"79","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"65"},{"filePath":"80","messages":"81","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"65"},{"filePath":"82","messages":"83","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"65"},{"filePath":"84","messages":"85","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"86"},"19srmkb",{"filePath":"87","messages":"88","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},{"filePath":"89","messages":"90","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"86"},{"filePath":"91","messages":"92","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"86"},{"filePath":"93","messages":"94","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"86"},{"filePath":"95","messages":"96","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"86"},{"filePath":"97","messages":"98","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"86"},{"filePath":"99","messages":"100","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"86"},{"filePath":"101","messages":"102","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"86"},{"filePath":"103","messages":"104","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"86"},{"filePath":"105","messages":"106","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"86"},{"filePath":"107","messages":"108","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"86"},{"filePath":"109","messages":"110","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"86"},{"filePath":"111","messages":"112","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},{"filePath":"113","messages":"114","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},{"filePath":"115","messages":"116","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"86"},{"filePath":"117","messages":"118","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"86"},{"filePath":"119","messages":"120","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"86"},{"filePath":"121","messages":"122","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"86"},{"filePath":"123","messages":"124","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},"C:\\Users\\adedo\\Desktop\\Jag Home Page\\src\\index.js",[],["125","126"],"C:\\Users\\adedo\\Desktop\\Jag Home Page\\src\\App.js",[],"C:\\Users\\adedo\\Desktop\\Jag Home Page\\src\\components\\Home\\Home.js",[],"C:\\Users\\adedo\\Desktop\\Jag Home Page\\src\\components\\MainHeader\\MainHeader.js",[],"C:\\Users\\adedo\\Desktop\\Jag Home Page\\src\\components\\Login\\Login.js",[],"C:\\Users\\adedo\\Desktop\\Jag Home Page\\src\\components\\MainHeader\\Navigation.js",[],"C:\\Users\\adedo\\Desktop\\Jag Home Page\\src\\components\\UI\\Button\\Button.js",[],"C:\\Users\\adedo\\Desktop\\Jag Home Page\\src\\components\\UI\\Card\\Card.js",[],"C:\\Users\\adedo\\Desktop\\Jag Home Page\\src\\components\\Page\\FrontPage.js",[],"C:\\Users\\adedo\\Desktop\\Jag Home Page\\src\\components\\Page\\Doctorpage.js",[],"C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\index.js",[],["127","128"],"C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\App.js",[],"C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\Page\\FrontPage.js",[],"C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\Login\\Login.js",[],"C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\MainHeader\\MainHeader.js",[],"C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\MainHeader\\Navigation.js",[],"C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\Home\\Home.js",[],"C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\UI\\Card\\Card.js",[],"C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\UI\\Button\\Button.js",[],"C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\Navbar\\Doctornav.js",[],"C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\ListHistory\\Doctorhistory.js",[],"C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\Fetch\\useFetch.js",[],"C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\Page\\MedicalHistory.js",[],"C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\ListHistory\\History.js",[],"C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\ListHistory\\historylist.js",[],"C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\Page\\PrescriptionPage.js",[],"C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\ListHistory\\Prescription.js",[],"C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\ListHistory\\Prescriptionlist .js",[],"C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\Page\\Doctorpage.js",[],"C:\\Users\\adedo\\Desktop\\SOFTWARE\\Masterschool\\React\\group_jap\\src\\components\\ListHistory\\HistoryDetails.js",[],{"ruleId":"129","replacedBy":"130"},{"ruleId":"131","replacedBy":"132"},{"ruleId":"129","replacedBy":"133"},{"ruleId":"131","replacedBy":"134"},"no-native-reassign",["135"],"no-negated-in-lhs",["136"],["135"],["136"],"no-global-assign","no-unsafe-negation"]
+[
+  {
+    "C:\\Users\\georg\\code\\GroupProject\\AGJ-Group-Project\\src\\index.js": "1",
+    "C:\\Users\\georg\\code\\GroupProject\\AGJ-Group-Project\\src\\App.js": "2",
+    "C:\\Users\\georg\\code\\GroupProject\\AGJ-Group-Project\\src\\components\\Page\\FrontPage.js": "3",
+    "C:\\Users\\georg\\code\\GroupProject\\AGJ-Group-Project\\src\\components\\Page\\Doctorpage.js": "4",
+    "C:\\Users\\georg\\code\\GroupProject\\AGJ-Group-Project\\src\\components\\Home\\Home.js": "5",
+    "C:\\Users\\georg\\code\\GroupProject\\AGJ-Group-Project\\src\\components\\MainHeader\\MainHeader.js": "6",
+    "C:\\Users\\georg\\code\\GroupProject\\AGJ-Group-Project\\src\\components\\Login\\Login.js": "7",
+    "C:\\Users\\georg\\code\\GroupProject\\AGJ-Group-Project\\src\\components\\Navbar\\Doctornav.js": "8",
+    "C:\\Users\\georg\\code\\GroupProject\\AGJ-Group-Project\\src\\components\\MainHeader\\Navigation.js": "9",
+    "C:\\Users\\georg\\code\\GroupProject\\AGJ-Group-Project\\src\\components\\UI\\Button\\Button.js": "10",
+    "C:\\Users\\georg\\code\\GroupProject\\AGJ-Group-Project\\src\\components\\UI\\Card\\Card.js": "11"
+  },
+  {
+    "size": 214,
+    "mtime": 1668526860948,
+    "results": "12",
+    "hashOfConfig": "13"
+  },
+  {
+    "size": 431,
+    "mtime": 1668526860942,
+    "results": "14",
+    "hashOfConfig": "13"
+  },
+  {
+    "size": 1112,
+    "mtime": 1668526860947,
+    "results": "15",
+    "hashOfConfig": "13"
+  },
+  {
+    "size": 1907,
+    "mtime": 1668526860946,
+    "results": "16",
+    "hashOfConfig": "13"
+  },
+  {
+    "size": 766,
+    "mtime": 1668527115567,
+    "results": "17",
+    "hashOfConfig": "13"
+  },
+  {
+    "size": 413,
+    "mtime": 1668526860945,
+    "results": "18",
+    "hashOfConfig": "13"
+  },
+  {
+    "size": 2610,
+    "mtime": 1668526860944,
+    "results": "19",
+    "hashOfConfig": "13"
+  },
+  {
+    "size": 1079,
+    "mtime": 1668526860946,
+    "results": "20",
+    "hashOfConfig": "13"
+  },
+  {
+    "size": 1466,
+    "mtime": 1668526860945,
+    "results": "21",
+    "hashOfConfig": "13"
+  },
+  {
+    "size": 371,
+    "mtime": 1668526860947,
+    "results": "22",
+    "hashOfConfig": "13"
+  },
+  {
+    "size": 229,
+    "mtime": 1668526860947,
+    "results": "23",
+    "hashOfConfig": "13"
+  },
+  {
+    "filePath": "24",
+    "messages": "25",
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0
+  },
+  "2l74if",
+  {
+    "filePath": "26",
+    "messages": "27",
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0
+  },
+  {
+    "filePath": "28",
+    "messages": "29",
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0
+  },
+  {
+    "filePath": "30",
+    "messages": "31",
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0
+  },
+  {
+    "filePath": "32",
+    "messages": "33",
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0
+  },
+  {
+    "filePath": "34",
+    "messages": "35",
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0
+  },
+  {
+    "filePath": "36",
+    "messages": "37",
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0
+  },
+  {
+    "filePath": "38",
+    "messages": "39",
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0
+  },
+  {
+    "filePath": "40",
+    "messages": "41",
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0
+  },
+  {
+    "filePath": "42",
+    "messages": "43",
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0
+  },
+  {
+    "filePath": "44",
+    "messages": "45",
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0
+  },
+  "C:\\Users\\georg\\code\\GroupProject\\AGJ-Group-Project\\src\\index.js",
+  [],
+  "C:\\Users\\georg\\code\\GroupProject\\AGJ-Group-Project\\src\\App.js",
+  [],
+  "C:\\Users\\georg\\code\\GroupProject\\AGJ-Group-Project\\src\\components\\Page\\FrontPage.js",
+  [],
+  "C:\\Users\\georg\\code\\GroupProject\\AGJ-Group-Project\\src\\components\\Page\\Doctorpage.js",
+  [],
+  "C:\\Users\\georg\\code\\GroupProject\\AGJ-Group-Project\\src\\components\\Home\\Home.js",
+  [],
+  "C:\\Users\\georg\\code\\GroupProject\\AGJ-Group-Project\\src\\components\\MainHeader\\MainHeader.js",
+  [],
+  "C:\\Users\\georg\\code\\GroupProject\\AGJ-Group-Project\\src\\components\\Login\\Login.js",
+  [],
+  "C:\\Users\\georg\\code\\GroupProject\\AGJ-Group-Project\\src\\components\\Navbar\\Doctornav.js",
+  [],
+  "C:\\Users\\georg\\code\\GroupProject\\AGJ-Group-Project\\src\\components\\MainHeader\\Navigation.js",
+  [],
+  "C:\\Users\\georg\\code\\GroupProject\\AGJ-Group-Project\\src\\components\\UI\\Button\\Button.js",
+  [],
+  "C:\\Users\\georg\\code\\GroupProject\\AGJ-Group-Project\\src\\components\\UI\\Card\\Card.js",
+  []
+]
