@@ -1,32 +1,22 @@
 {
   "datas": [
     {
-      "date": "2022-10-07T00:00",
-      "complain": "could not sleep everywell",
-      "diagnose": "eat fresh fruit",
-      "treatment": "take a cup of milk",
+      "date": "2022-10-07",
+      "complain": "Chills ,Feverish ,Abominal Pain and Difficult in breathing",
+      "assement": "Upper respiratory tract infection (URTI)Malaria",
+      "issue": "malaria",
+      "status": "Close",
+      "treatment": "to do malarial parasite test Tablet Arthermeter 80/480 1",
       "id": 1
     },
     {
-      "date": "2022-10-07T00:00",
-      "Complain": "could not sleep everywell",
-      "diagnose": "eat fresh fruit",
-      "treatment": "take a cup of milk",
+      "date": "2022-11-17",
+      "complain": " Abdominal pain,  ",
+      "assement": "Upper respiratory  ",
+      "issue": "malaria",
+      "status": "Pending",
+      "treatment": "Tablet Arthermeter 80/480 1-1",
       "id": 2
-    },
-    {
-      "date": "2022-11-10T20:26",
-      "complain": "head",
-      "diagnose": "good like ",
-      "treatment": "drink water",
-      "id": 3
-    },
-    {
-      "date": "2022-11-13T21:20",
-      "complain": "qsunday",
-      "diagnose": "gooo",
-      "treatment": "drink water",
-      "id": 4
     }
   ]
 }

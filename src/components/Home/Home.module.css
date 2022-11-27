@@ -5,41 +5,45 @@
   margin: 2rem auto;
   text-align: center;
 }
-.DashboardContentFlex{
+.DashboardContentFlex {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 2rem auto;
   padding: 3rem;
   width: 100%;
-  gap:30px;
+  gap: 30px;
   max-width: 60rem;
 }
 
-.history{
+.history {
   width: 400px;
   height: 400px;
   background-color: rgb(223, 215, 222);
   text-align: center;
 }
 
-.appointment{
+.appointment {
   width: 400px;
   height: 400px;
   background-color: rgb(175, 173, 175);
   text-align: center;
 }
 
-.Prescription{
+.Prescription {
   width: 400px;
   height: 400px;
   background-color: rgb(175, 173, 175);
   text-align: center;
 }
 
-.information{
+.information {
   width: 400px;
   height: 400px;
   background-color: rgb(223, 215, 222);
   text-align: center;
+}
+a {
+  text-decoration-line: none;
+  list-style-type: none;
 }
