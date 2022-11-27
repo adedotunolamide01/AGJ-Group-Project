@@ -1,5 +1,7 @@
-import React from "react";
-import "./historylist.css";
+import { Link } from 'react-router-dom';
+import React from 'react';
+import './historylist.css';
+
 const Historylist = ({
   datas,
   date,
@@ -14,9 +16,11 @@ const Historylist = ({
       <h2>Medical History</h2>
       {datas.map((list) => (
         <div className="blog-preview" key={list.id}>
-          <h2>Date: {list.date}</h2>
-          {<p>Complain: {list.complain}</p>}
-          {<p>Status: {list.status}</p>}
+          <Link to={`/History/${list.id}`}>
+            <h2> Date: {list.date}</h2>
+            <p>Complain: {list.complain}</p>
+            <p>Status: {list.status}</p>
+          </Link>
         </div>
       ))}
     </div>

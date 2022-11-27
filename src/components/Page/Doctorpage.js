@@ -15,7 +15,7 @@ const Doctorpage = () => {
   const [reset] = useState('');
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const healthData = { date, complain, assement, issue, treatment, reset };
 
     fetch('http://localhost:8000/datas', {
@@ -37,12 +37,14 @@ const Doctorpage = () => {
               </div>
               <div className="col-75">
                 <input
-                  type="datetime-local"
-                  id="meeting-time"
-                  name="meeting-time"
+                  type="date"
+                  id="date"
+                  name="date"
                   value={date}
-                  min="2022-10-07T00:00"
-                  max="2800-12-14T00:00"
+                  min="2022-10-07T"
+                  max="2800-12-14T"
+                  onload="getDate()"
+                  class="form-control"
                   onChange={(e) => setdate(e.target.value)}
                 ></input>
               </div>

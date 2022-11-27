@@ -1,8 +1,8 @@
-import React from "react";
-import History from "../ListHistory/History";
+import React from 'react';
+import History from '../ListHistory/History';
 
-import Doctornav from "../Navbar/Doctornav";
-import "./DoctorCss.css";
+import Doctornav from '../Navbar/Doctornav';
+import './DoctorCss.css';
 
 const MedicalHistory = () => {
   return (

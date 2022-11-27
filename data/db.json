@@ -1,7 +1,7 @@
 {
   "datas": [
     {
-      "date": "2022-10-07T00:00",
+      "date": "2022-10-07",
       "complain": "Chills ,Feverish ,Abominal Pain and Difficult in breathing",
       "assement": "Upper respiratory tract infection (URTI)Malaria",
       "issue": "malaria",
@@ -10,22 +10,13 @@
       "id": 1
     },
     {
-      "date": "2022-11-17T09:26",
-      "complain": "Chills, Feverish,  Abdominal pain,  Difficulty in breathing.",
-      "assement": "Upper respiratory tract infection (URTI) Malaria ",
+      "date": "2022-11-17",
+      "complain": " Abdominal pain,  ",
+      "assement": "Upper respiratory  ",
       "issue": "malaria",
       "status": "Pending",
-      "treatment": "Tablet Arthermeter 80/480 1-1\nTablet vitamin B-complex  1 daily \nTablet paracetamol 2-2-2",
+      "treatment": "Tablet Arthermeter 80/480 1-1",
       "id": 2
-    },
-    {
-      "date": "2022-11-25T12:52",
-      "complain": "Chills, Feverish,  Abdominal pain,  Difficulty in breathing.",
-      "assement": "Upper respiratory tract infection (URTI) Malaria ",
-      "issue": "malaria",
-      "treatment": "gfhgbf",
-      "reset": "",
-      "id": 3
     }
   ]
 }

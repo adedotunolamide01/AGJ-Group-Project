@@ -1,12 +1,12 @@
-import Historylist from "./historylist";
-import useFetch from "../Fetch/useFetch";
+import Historylist from './historylist';
+import useFetch from '../Fetch/useFetch';
 
 const History = () => {
   const {
     data: datas,
     isPending,
     error,
-  } = useFetch("http://localhost:8000/datas");
+  } = useFetch('http://localhost:8000/datas');
   return (
     <div className="home">
       {error && <div>{error}</div>}
