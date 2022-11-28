@@ -1,10 +1,12 @@
 import "./Diabetes.css";
 import { Link } from "react-router-dom";
+import Doctornav from "../../Navbar/Doctornav";
 
 const Diabetes = () => {
   return (
     <div className="diabetes-container">
-      <h1>Learn about Diabetes</h1>
+      <Doctornav />
+      <h1 className="diabetes-heading">Learn about Diabetes</h1>
 
       <div className="diabetes-definition">
         <h3>What is Diabetes?</h3>
@@ -86,10 +88,12 @@ const Diabetes = () => {
               that your body doesn't use insulin properly. And while some people
               can control their blood glucose levels with healthy eating and
               exercise, others may need medication or insulin to help manage it.
-              <br />A key part of managing type 2 diabetes is maintaining a
-              healthy diet. You need to eat something sustainable that helps you
-              feel better and still makes you feel happy and fed. Fitness is
-              another key to managing type 2.
+            </p>
+            <p>
+              A key part of managing type 2 diabetes is maintaining a healthy
+              diet. You need to eat something sustainable that helps you feel
+              better and still makes you feel happy and fed. Fitness is another
+              key to managing type 2.
             </p>
           </div>
           <div className="diabetes-card">
@@ -104,8 +108,9 @@ const Diabetes = () => {
               forms of diabetes, it's one that you can manage. It doesn't mean
               that you had diabetes before you conceived or that you will have
               diabetes after you give birth. It means that, by working with your
-              doctor, you can have a healthy pregnancy and a healthy baby.{" "}
-              <br />
+              doctor, you can have a healthy pregnancy and a healthy baby.
+            </p>
+            <p>
               The placenta supports the baby as it grows. Sometimes, these
               hormones also block the action of the mother's insulin to her body
               and it causes a problem called insulin resistance. This insulin

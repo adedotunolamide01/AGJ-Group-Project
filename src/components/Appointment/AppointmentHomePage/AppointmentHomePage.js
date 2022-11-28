@@ -1,9 +1,11 @@
-import "./AppointmentHomePage.css";
-import { Link } from "react-router-dom";
+import './AppointmentHomePage.css';
+import { Link } from 'react-router-dom';
+import Doctornav from '../../Navbar/Doctornav';
 
 const AppointmentHome = () => {
   return (
-    <div>
+    <div className="appointment-container">
+      <Doctornav />
       <div className="appointment-home">
         <div className="appointment">
           <Link className="link" to="/viewappointment">

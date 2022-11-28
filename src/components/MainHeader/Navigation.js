@@ -1,6 +1,6 @@
-import React from "react";
-import classes from "./Navigation.module.css";
-import { Link } from "react-router-dom";
+import React from 'react';
+import classes from './Navigation.module.css';
+import { Link } from 'react-router-dom';
 
 const Navigation = (props) => {
   return (
@@ -16,17 +16,18 @@ const Navigation = (props) => {
         {props.isLoggedIn && (
           <Link to="./medicalhistory">
             <li>
-              <a href="../medicalhistory">Medical History</a>
+              <a href="./medicalhistory">Medical History</a>
             </li>
           </Link>
         )}
         {props.isLoggedIn && (
-          <Link to="./">
+          <Link to="./appointment">
             <li>
-              <a href="./">Appointment</a>
+              <a href="./appointment">Appointment</a>
             </li>
           </Link>
         )}
+
         {props.isLoggedIn && (
           <Link to="./prescription">
             <li>
@@ -35,9 +36,9 @@ const Navigation = (props) => {
           </Link>
         )}
         {props.isLoggedIn && (
-          <Link to="./">
+          <Link to="./healthinfo">
             <li>
-              <a href="./">Health Info.</a>
+              <a href="./healthinfo">Health Info.</a>
             </li>
           </Link>
         )}
