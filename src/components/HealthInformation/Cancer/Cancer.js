@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
+import Doctornav from "../../Navbar/Doctornav";
 import "./Cancer.css";
 
 const Cancer = () => {
   return (
     <div className="cancer-container">
+      <Doctornav />
       <div>
         <h1 className="cancer-heading">Learn about Cancer</h1>
         <h3 className="cancer-definition">What is cancer?</h3>
@@ -25,8 +27,9 @@ const Cancer = () => {
           and abnormal or damaged cells grow and multiply when they shouldn’t.
           These cells may form tumors, which are lumps of tissue. Tumors can be
           cancerous or not cancerous (benign).
-          <br />
-          <br />
+        </p>
+        <br />
+        <p>
           Cancerous tumors spread into, or invade, nearby tissues and can travel
           to distant places in the body to form new tumors (a process called
           metastasis). Cancerous tumors may also be called malignant tumors.
@@ -38,7 +41,7 @@ const Cancer = () => {
           be life threatening, such as benign tumors in the brain.
         </p>
       </div>
-      <div>
+      <div className="type-container">
         <h3 className="type-heading">Types of cancer</h3>
         <p>
           There are more than 100 types of cancer. Types of cancer are usually
@@ -68,7 +71,7 @@ const Cancer = () => {
           </li>
         </ul>
       </div>
-      <div>
+      <div className="cancer-develop">
         <h3>How Does Cancer Develop</h3>
         <div className="develop-container">
           <div className="develop-details">
@@ -94,7 +97,9 @@ const Cancer = () => {
               turn cancerous. But the body's ability to do so goes down as we
               age. This is part of the reason why there is a higher risk of
               cancer later in life.
-              <br />
+            </p>
+
+            <p className="list-info">
               Each person's cancer has a unique combination of genetic changes.
               As the cancer continues to grow, additional changes will occur.
               Even within the same tumor, different cells may have different

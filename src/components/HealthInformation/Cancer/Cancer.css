@@ -2,6 +2,11 @@
   margin: 2rem;
 }
 
+.cancer-heading {
+  margin-top: 8rem;
+  color: #dd0db0;
+}
+
 .cancer-definition {
   margin: 2rem 0 1rem 0;
 }
@@ -16,11 +21,19 @@
   padding-top: 1rem;
 }
 
+.type-container {
+  margin-top: 3rem;
+}
+
 .type-list {
   margin: 1rem 0;
 }
 li {
   padding: 0.2rem;
+}
+
+.cancer-develop {
+  margin-top: 3rem;
 }
 
 .develop-container {
@@ -41,28 +54,6 @@ li {
 .cancer-button {
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
-
-.learn-btn {
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
-  background-color: rgb(29, 151, 117);
-  color: white;
-  border: 1px solid rgb(29, 151, 117);
-  width: 100%;
-}
-
-.btn {
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
-  background-color: rgb(29, 151, 117);
-  color: white;
-  border: 1px solid white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  width: 100%;
 }
 
 .cancer-back-svg {
