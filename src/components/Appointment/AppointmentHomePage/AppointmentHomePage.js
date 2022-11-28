@@ -1,5 +1,5 @@
-import "./AppointmentHomePage.css";
-import { Link } from "react-router-dom";
+import './AppointmentHomePage.css';
+import { Link } from 'react-router-dom';
 
 const AppointmentHome = () => {
   return (
