@@ -3,6 +3,7 @@ import Login from "../Login/Login";
 import Home from "../Home/Home";
 import MainHeader from "../MainHeader/MainHeader";
 import Form from "../Form/Form";
+import Footer from "./Footer";
 
 function FrontPage() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -33,8 +34,8 @@ function FrontPage() {
         {!isLoggedIn && <Login onLogin={loginHandler} />}
         {isLoggedIn && <Home onLogout={logoutHandler} />}
         {!isLoggedIn && <Form onLogin={loginHandler} />}
+        {!isLoggedIn && <Footer />}
       </main>
-     
     </React.Fragment>
   );
 }

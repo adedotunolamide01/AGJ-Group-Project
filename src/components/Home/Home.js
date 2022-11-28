@@ -20,13 +20,13 @@ const Home = (props) => {
           </Link>
         </Card>
         <Card className={classes.appointment}>
-          <h1>Next appointment</h1>
+          <h1>Appointment</h1>
         </Card>
         <Card className={classes.Prescription}>
           <Link to="../prescription">
             <li>
               <a href="../prescription">
-                <h1>View Prescription</h1>
+                <h1>Prescription</h1>
               </a>
             </li>
           </Link>
