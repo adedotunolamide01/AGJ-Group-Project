@@ -3,6 +3,11 @@
   padding-top: 3rem;
 }
 
+.healthinfo-heading {
+  margin-top: 5rem;
+  color: #dd0db0;
+}
+
 .healthinfo-quote {
   padding-top: 2rem;
 }
@@ -17,7 +22,7 @@
 .healthinfo-info {
   width: 20rem;
   height: 40vh;
-  border: 0.1rem solid rgb(29, 151, 117);
+  border: 0.1rem solid #741188;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,26 +30,14 @@
 }
 
 .healthinfo-svg {
-  fill: rgb(29, 151, 117);
+  fill: #dd0db0;
   width: 3rem;
 }
 
 .healthinfo-button {
   display: flex;
-  justify-content: flex-end;
-  padding: 2rem 13rem 2rem 0;
-}
-
-.btn {
-  padding: 1rem 3rem;
-  border-radius: 0.5rem;
-  background-color: rgb(29, 151, 117);
-  color: white;
-  border: 1px solid white;
-  display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+  padding: 2rem;
 }
 
 .healthinfo-back-svg {

@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+import Doctornav from "../../Navbar/Doctornav";
 import "./Stroke.css";
 
 const Stroke = () => {
   return (
     <div className="stroke-container">
-      <h1>Learn about Stroke</h1>
+      <Doctornav />
+      <h1 className="stroke-heading">Learn about Stroke</h1>
       <div className="stroke-definition">
         <h3>What is Stroke?</h3>
         <p className="definition-info">
@@ -99,7 +101,7 @@ const Stroke = () => {
         </div>
       </div>
       <div className="symptoms-container">
-        <h3 className="symptoms-heading">symptoms</h3>
+        <h3 className="symptoms-heading">Symptoms</h3>
         <p className="symptoms-info">
           If you or someone you're with may be having a stroke, pay particular
           attention to the time the symptoms began. Some treatment options are

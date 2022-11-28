@@ -7,11 +7,12 @@ p {
   flex-direction: column;
   align-items: center;
   gap: 3rem;
+  margin-top: 10rem;
 }
 
 .appointment-display {
   width: 80%;
-  height: 30vh;
+  height: 40vh;
   padding: 2rem 0 0 5rem;
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
@@ -33,14 +34,11 @@ p {
 
 .appointment-history-heading {
   margin: 2rem 0 1rem 0;
+  color: #dd0db0;
 }
 
 span {
   margin-left: 2rem;
-}
-
-.book-btn {
-  margin: 1rem 0;
 }
 
 .back-button {

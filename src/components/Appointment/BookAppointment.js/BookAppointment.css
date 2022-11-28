@@ -5,6 +5,8 @@ p {
 .booking-heading {
   text-align: center;
   padding-top: 5rem;
+  color: #dd0db0;
+  margin-top: 5rem;
 }
 
 form {
@@ -19,7 +21,7 @@ textarea {
   outline: none;
   border: none;
   border-bottom: 0.1rem solid #cccccc;
-  width: 100% auto;
+  width: 100%;
   background-image: -webkit-linear-gradient(left, white 10px, transparent 10px),
     -webkit-linear-gradient(right, white 10px, transparent 10px),
     -webkit-linear-gradient(white 30px, #ccc 30px, #ccc 31px, white 31px);
@@ -33,13 +35,19 @@ textarea {
 
 label {
   margin: 2rem 0 1rem 0;
+  color: #dd0db0;
+}
+
+input {
+  width: 100%;
 }
 
 .submit {
   text-align: center;
   padding: 0.5rem;
-  background-color: rgb(99, 230, 190);
-  border: 0.1rem solid rgb(99, 230, 190);
+  background-color: #dd0db0;
+  border: 0.1rem solid #dd0db0;
+  color: white;
   border-radius: 0.5rem;
   width: 20%;
   margin-top: 0.5rem;
