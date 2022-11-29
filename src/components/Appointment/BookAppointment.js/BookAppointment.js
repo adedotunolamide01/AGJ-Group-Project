@@ -10,7 +10,7 @@ const BookAppointment = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const datas = { reason, apptDate };
-    fetch(`http://localhost:8000/datas`, {
+    fetch(`http://localhost:5000/datas`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(datas),

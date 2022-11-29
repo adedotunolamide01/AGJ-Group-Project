@@ -8,7 +8,7 @@ const ViewAppointment = () => {
 
   function getAppointment() {
     try {
-      fetch(`http://localhost:8000/datas`)
+      fetch(`http://localhost:5000/datas`)
         .then((response) => {
           return response.json();
         })
