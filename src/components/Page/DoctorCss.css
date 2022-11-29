@@ -12,9 +12,13 @@ textarea {
   resize: vertical;
 }
 
-label {
+.col-25 label {
   padding: 12px 12px 12px 0;
   display: inline-block;
+  margin-right: 70px;
+
+  min-width: 200px;
+  text-align: left;
 }
 
 .container {
@@ -57,7 +61,9 @@ label {
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
+  display: block;
 }
+
 .create input,
 .create textarea,
 .create select {
