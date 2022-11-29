@@ -5,14 +5,22 @@ import "./ViewAppointment.css";
 
 const ViewAppointment = () => {
   const [fetchedData, setFetchedData] = useState([]);
+
+  function getAppointment() {
+    try {
+      fetch(`http://localhost:8000/datas`)
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          setFetchedData(data);
+        });
+    } catch (e) {
+      console.log("Error! cannot fetch data " + e);
+    }
+  }
   useEffect(() => {
-    fetch(`http://localhost:8000/datas`)
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setFetchedData(data);
-      });
+    getAppointment();
   }, []);
 
   return (
@@ -25,7 +33,7 @@ const ViewAppointment = () => {
             const currentDate = new Date();
             if (savedApptDate.getTime() >= currentDate.getTime()) {
               return (
-                <p className="appointment-display-text">
+                <p className="appointment-display-text" key={data.id}>
                   Your next appointment is {data.apptDate}
                 </p>
               );
@@ -41,7 +49,7 @@ const ViewAppointment = () => {
             const currentDate = new Date();
             if (savedApptDate.getTime() < currentDate.getTime()) {
               return (
-                <li>
+                <li key={data.id}>
                   {data.apptDate}
                   <span>{data.reason}</span>
                 </li>
