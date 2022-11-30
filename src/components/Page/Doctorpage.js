@@ -129,9 +129,9 @@ const Doctorpage = () => {
                   onChange={(e) => setStatus(e.target.value)}
                 >
                   <option value="select">Select</option>
-                  <option value="oepn">Open</option>
+                  <option value="open">Open</option>
                   <option value="close">Close</option>
-                  <option value="Pending">Others</option>
+                  <option value="Pending">Pending</option>
                 </select>
               </div>
             </div>

@@ -13,6 +13,7 @@ const BookAppointment = () => {
     fetch(`http://localhost:5000/datas`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
+
       body: JSON.stringify(datas),
     }).then(() => {
       alert("Your booking has been sent successfully.");
@@ -26,9 +27,10 @@ const BookAppointment = () => {
     <div className="booking-container">
       <Doctornav />
       <h1 className="booking-heading">Book your appointment!</h1>
-      <form onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <label for="reason">Reason for appointment:</label>
         <textarea
+          className="textarea"
           rows="4"
           cols="50"
           name="reason"
@@ -40,6 +42,7 @@ const BookAppointment = () => {
 
         <label for="date">Choose date:</label>
         <input
+          className="input"
           type="date"
           name="date:"
           value={apptDate}
