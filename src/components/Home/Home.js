@@ -1,7 +1,7 @@
-import React from "react";
-import Card from "../UI/Card/Card";
-import classes from "./Home.module.css";
-import { Link } from "react-router-dom";
+import React from 'react';
+import Card from '../UI/Card/Card';
+import classes from './Home.module.css';
+import { Link } from 'react-router-dom';
 
 const Home = (props) => {
   return (
@@ -20,7 +20,13 @@ const Home = (props) => {
           </Link>
         </Card>
         <Card className={classes.appointment}>
-          <h1>Next appointment</h1>
+          <Link to="../appointment">
+            <li>
+              <a href="../appointment">
+                <h1>Appointment</h1>
+              </a>
+            </li>
+          </Link>
         </Card>
         <Card className={classes.Prescription}>
           <Link to="../prescription">
@@ -32,7 +38,13 @@ const Home = (props) => {
           </Link>
         </Card>
         <Card className={classes.information}>
-          <h1>Health Information</h1>
+          <Link to="../healthinfo">
+            <li>
+              <a href="../healthinfo">
+                <h1>Health Information</h1>
+              </a>
+            </li>
+          </Link>
         </Card>
       </div>
     </div>

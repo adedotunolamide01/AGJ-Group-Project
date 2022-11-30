@@ -1,6 +1,6 @@
-import "./AppointmentHomePage.css";
-import { Link } from "react-router-dom";
-import Doctornav from "../../Navbar/Doctornav";
+import './AppointmentHomePage.css';
+import { Link } from 'react-router-dom';
+import Doctornav from '../../Navbar/Doctornav';
 
 const AppointmentHome = () => {
   return (
