@@ -5,7 +5,9 @@ import "./BookAppointment.css";
 
 const BookAppointment = () => {
   const [reason, setReason] = useState("");
-  const [apptDate, setApptDate] = useState("");
+  const [apptDate, setApptDate] = useState(
+    new Date().toISOString().substring(0, 10)
+  );
 
   const handleSubmit = (event) => {
     event.preventDefault();

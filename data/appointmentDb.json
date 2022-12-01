@@ -24,6 +24,16 @@
       "reason": "I don't understand how I feel, I need a blood test",
       "apptDate": "2022-11-29",
       "id": 9
+    },
+    {
+      "reason": "I can't explain how I feel",
+      "apptDate": "2022-12-06",
+      "id": 10
+    },
+    {
+      "reason": "Cold",
+      "apptDate": "2022-12-15",
+      "id": 11
     }
   ]
 }

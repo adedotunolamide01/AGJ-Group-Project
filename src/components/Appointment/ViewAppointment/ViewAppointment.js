@@ -5,19 +5,31 @@ import "./ViewAppointment.css";
 
 const ViewAppointment = () => {
   const [fetchedData, setFetchedData] = useState([]);
+  const [isPending, setIsPending] = useState(true);
+  const [error, setError] = useState("");
+
+  const handleDelete = (id) => {
+    const newData = fetchedData.filter((appData) => appData.id !== id);
+    setFetchedData(newData);
+  };
 
   function getAppointment() {
-    try {
-      fetch(`http://localhost:5000/datas`)
-        .then((response) => {
-          return response.json();
-        })
-        .then((data) => {
-          setFetchedData(data);
-        });
-    } catch (e) {
-      console.log("Error! cannot fetch data " + e);
-    }
+    fetch(`http://localhost:5000/datas`)
+      .then((response) => {
+        if (!response.ok) {
+          throw Error("Fetching data failed.");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setFetchedData(data);
+        setIsPending(false);
+        setError(null);
+      })
+      .catch((err) => {
+        setError(err.message);
+        setIsPending(false);
+      });
   }
   useEffect(() => {
     getAppointment();
@@ -28,34 +40,48 @@ const ViewAppointment = () => {
       <div className="appointment-display-home">
         <Doctornav />
         <div className="appointment-display">
-          {fetchedData.map((data) => {
-            const savedApptDate = new Date(data.apptDate);
-            const currentDate = new Date();
-            if (savedApptDate.getTime() >= currentDate.getTime()) {
-              return (
-                <p className="appointment-display-text" key={data.id}>
-                  Your next appointment is {data.apptDate}
-                </p>
+          {error && <div>{error}</div>}
+          {isPending && <div>Loading... </div>}
+          {fetchedData &&
+            fetchedData.map((data) => {
+              const savedApptDate = new Date(data.apptDate);
+              const currentDate = new Date();
+              console.log(
+                "saved date " + savedApptDate,
+                "current date " + currentDate
               );
-            } else {
-              console.log("You do not have any pending appointment");
-            }
-          })}
+              if (savedApptDate.getTime() >= currentDate.getTime()) {
+                return (
+                  <div className="appointment-display-text" key={data.id}>
+                    <p>Your next appointment is {data.apptDate}</p>
+                    <button
+                      className="delete-btn"
+                      onClick={() => handleDelete(data.id)}
+                    >
+                      Delete
+                    </button>
+                  </div>
+                );
+              } else {
+                console.log("You do not have any pending appointment");
+              }
+            })}
         </div>
         <div className="appointment-history">
           <h3 className="appointment-history-heading">Appointment History</h3>
-          {fetchedData.map((data) => {
-            const savedApptDate = new Date(data.apptDate);
-            const currentDate = new Date();
-            if (savedApptDate.getTime() < currentDate.getTime()) {
-              return (
-                <li key={data.id}>
-                  {data.apptDate}
-                  <span>{data.reason}</span>
-                </li>
-              );
-            }
-          })}
+          {fetchedData &&
+            fetchedData.map((data) => {
+              const savedApptDate = new Date(data.apptDate);
+              const currentDate = new Date();
+              if (savedApptDate.getTime() < currentDate.getTime()) {
+                return (
+                  <li key={data.id}>
+                    {data.apptDate}
+                    <span>{data.reason}</span>
+                  </li>
+                );
+              }
+            })}
         </div>
         <div className="back-button">
           <Link to="/appointment">
