@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+input[type='text'],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.col-25 label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  margin-right: 70px;
+
+  min-width: 200px;
+  text-align: left;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25,
+  .col-75,
+  input[type='submit'] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+/* create Doctor form */
+.create {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+}
+
+.create input,
+.create textarea,
+.create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.create button {
+  background: #dd0db0;
+  border: 1px solid #dd0db0;
+  color: white;
+  border: 0;
+  padding: 12px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  float: right;
+}
+
+.create button:hover {
+  background-color: #8b088b;
+}
+.doctorForm {
+  margin-top: 110px;
+}
+
+.medical {
+  margin-top: 80px;
+}

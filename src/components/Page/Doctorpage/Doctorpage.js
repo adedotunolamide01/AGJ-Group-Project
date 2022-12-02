@@ -1,8 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-import Doctorhistory from '../ListHistory/Doctorhistory';
-
-import Doctornav from '../Navbar/Doctornav';
+import Doctorhistory from '../../ListHistory/Doctorhistory';
+import NavDoctor from '../../Navbar/NavDoctor';
 import './DoctorCss.css';
 
 const Doctorpage = () => {
@@ -28,7 +27,7 @@ const Doctorpage = () => {
   return (
     <div>
       <div className="create">
-        <Doctornav />
+        <NavDoctor />
         <div className="doctorForm">
           <form onSubmit={handleSubmit}>
             <div className="row">

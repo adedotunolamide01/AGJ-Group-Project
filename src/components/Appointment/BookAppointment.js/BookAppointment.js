@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Doctornav from '../../Navbar/Doctornav';
+import PatienceNav from '../../Navbar/Patiencenav';
 import './BookAppointment.css';
 
 const BookAppointment = () => {
@@ -24,7 +24,7 @@ const BookAppointment = () => {
 
   return (
     <div className="booking-container">
-      <Doctornav />
+      <PatienceNav />
       <h1 className="booking-heading">Book your appointment!</h1>
       <form className="form" onSubmit={handleSubmit}>
         <label for="reason">Reason for appointment:</label>

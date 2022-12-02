@@ -1,67 +1,59 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import Card from '../UI/Card/Card';
-import classes from './Login.module.css';
-import Button from '../UI/Button/Button';
-import MainHeader from '../MainHeader/MainHeader';
-import { useAuth } from '../Context/authContext';
-import { Alert } from 'react-bootstrap';
-import Footer from '../Footer/Footer';
 
-const Login = () => {
+import Card from '../src/components/UI/Card/Card';
+import classes from './Login.module.css';
+import Button from '../src/components/UI/Button/Button';
+import MainHeader from '../src/components/MainHeader/MainHeader';
+
+const Login = (props) => {
+  const [enteredEmail, setEnteredEmail] = useState('');
   const [emailIsValid, setEmailIsValid] = useState();
-  const [enteredPassword] = useState('');
+  const [enteredPassword, setEnteredPassword] = useState('');
   const [passwordIsValid, setPasswordIsValid] = useState();
   const [formIsValid, setFormIsValid] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
 
   useEffect(() => {
     const identifier = setTimeout(() => {
-      setFormIsValid(email.includes('@') && password.trim().length > 6);
+      setFormIsValid(
+        enteredEmail.includes('@') && enteredPassword.trim().length > 6
+      );
     }, 500);
     return () => {
       clearTimeout(identifier);
     };
-  }, [email, password]);
+  }, [enteredEmail, enteredPassword]);
+
+  const emailChangeHandler = (event) => {
+    setEnteredEmail(event.target.value);
+  };
+
+  const passwordChangeHandler = (event) => {
+    setEnteredPassword(event.target.value);
+
+    setFormIsValid(
+      event.target.value.trim().length > 6 && enteredEmail.includes('@')
+    );
+  };
 
   const validateEmailHandler = () => {
-    setEmailIsValid(email.includes('@'));
+    setEmailIsValid(enteredEmail.includes('@'));
   };
 
   const validatePasswordHandler = () => {
     setPasswordIsValid(enteredPassword.trim().length > 6);
   };
-  const navigate = useNavigate();
-  const { login } = useAuth();
 
-  const submitHandler = async (e) => {
-    e.preventDefault();
-    try {
-      setLoading(true);
-      // go to db
-      await login({ email, password });
-      setLoading(false);
-
-      // navigate to a different page
-      navigate('/patiencehome');
-    } catch (err) {
-      setLoading(false);
-      console.log(err);
-      setError('You dont an account or Check Username and Password ');
-    }
+  const submitHandler = (event) => {
+    event.preventDefault();
+    props.onLogin(enteredEmail, enteredPassword);
   };
 
-  if (loading) return <div>loading...</div>;
   return (
     <div>
       <div className={classes.mainheader}>
         <MainHeader />
       </div>
       <Card className={classes.login}>
-        {error && <Alert variant="danger">{error}</Alert>}
         <form onSubmit={submitHandler}>
           <div
             className={`${classes.control} ${
@@ -72,11 +64,9 @@ const Login = () => {
             <input
               type="email"
               id="email"
-              value={email}
+              value={enteredEmail}
+              onChange={emailChangeHandler}
               onBlur={validateEmailHandler}
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
             />
           </div>
           <div
@@ -88,11 +78,9 @@ const Login = () => {
             <input
               type="password"
               id="password"
-              value={password}
+              value={enteredPassword}
+              onChange={passwordChangeHandler}
               onBlur={validatePasswordHandler}
-              onChange={(e) => {
-                setPassword(e.target.value);
-              }}
             />
           </div>
           <div className={classes.actions}>
@@ -104,15 +92,8 @@ const Login = () => {
               Login
             </Button>
           </div>
-          <p>
-            Still not have account?
-            <Link to="/signup">
-              <strong> Click Create New Account</strong>
-            </Link>
-          </p>
         </form>
       </Card>
-      <Footer />
     </div>
   );
 };

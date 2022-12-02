@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
-import Doctornav from "../../Navbar/Doctornav";
-import "./Stroke.css";
+import { Link } from 'react-router-dom';
+import Patiencenav from '../../Navbar/Patiencenav';
+import './Stroke.css';
 
 const Stroke = () => {
   return (
     <div className="stroke-container">
-      <Doctornav />
+      <Patiencenav />
       <h1 className="stroke-heading">Learn about Stroke</h1>
       <div className="stroke-definition">
         <h3>What is Stroke?</h3>

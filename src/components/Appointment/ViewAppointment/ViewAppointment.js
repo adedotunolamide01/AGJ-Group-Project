@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import Doctornav from "../../Navbar/Doctornav";
-import "./ViewAppointment.css";
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import PatienceNav from '../../Navbar/Patiencenav';
+import './ViewAppointment.css';
 
 const ViewAppointment = () => {
   const [fetchedData, setFetchedData] = useState([]);
@@ -18,7 +18,7 @@ const ViewAppointment = () => {
   return (
     <div className="view-appointment-container">
       <div className="appointment-display-home">
-        <Doctornav />
+        <PatienceNav />
         <div className="appointment-display">
           {fetchedData.map((data) => {
             const savedApptDate = new Date(data.apptDate);
@@ -30,7 +30,7 @@ const ViewAppointment = () => {
                 </p>
               );
             } else {
-              console.log("You do not have any pending appointment");
+              console.log('You do not have any pending appointment');
             }
           })}
         </div>

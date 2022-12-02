@@ -1,14 +1,13 @@
 import React from 'react';
-import History from '../ListHistory/History';
-
-import Doctornav from '../Navbar/Doctornav';
+import History from '../../ListHistory/History';
+import NavDoctor from '../../Navbar/NavDoctor';
 import './DoctorCss.css';
 
-const MedicalHistory = () => {
+const DoctorMedicalHistory = () => {
   return (
     <div>
       <div className="create">
-        <Doctornav />
+        <NavDoctor />
         <div>
           <h2>Medical History</h2>
         </div>
@@ -21,4 +20,4 @@ const MedicalHistory = () => {
   );
 };
 
-export default MedicalHistory;
+export default DoctorMedicalHistory;

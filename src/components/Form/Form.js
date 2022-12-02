@@ -1,98 +1,132 @@
-import React from "react";
-import bgImg from "./regImg.jpg";
-import "./Form.css";
-import { useState } from "react";
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../Context/authContext';
+import classes from '../Login/Login.module.css';
+import MainHeader from '../MainHeader/MainHeader';
+import React from 'react';
+import bgImg from './regImg.jpg';
+import './Form.css';
+import { useProfile } from '../Context/ProfileContext';
 
-export default function Form() {
-  const [fullName, setfullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [age, setAge] = useState("");
-  const [bloodGroup, setBloodGroup] = useState("");
-  const [address, setAddress] = useState("");
-  const [phoneNumber, setPhonenumber] = useState("");
-  const [user, setUser] = useState("patient");
+function Form() {
+  const [fullName, setfullName] = useState('');
+  const [gender, setGender] = useState('');
+  const [city, setCity] = useState('');
+  const [age, setAge] = useState('');
+  const [bloodGroup, setBloodGroup] = useState('');
+  const [address, setAddress] = useState('');
+  const [phoneNumber, setPhonenumber] = useState('');
+  const [Next_of_kin_phone_no, setNext_of_kin_phone_no] = useState('');
+  const [Next_of_kin_Name, setNext_of_kin_Name] = useState('');
+  const [userStatus, setStatus] = useState('patient');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e) => {
+  const { user, userLoading } = useAuth();
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const registrationData = {
-      fullName,
-      email,
-      password,
-      age,
-      bloodGroup,
-      address,
-      phoneNumber,
-      user,
-    };
 
-    fetch("http://localhost:8000/reg", {
-      method: "POST",
-      headers: { "Content-type": "application/json" },
-      body: JSON.stringify(registrationData),
-    }).then(() => {});
+    try {
+      setLoading(true);
+      // go to db
+      // await Form({ email, password });
+      setLoading(false);
+
+      // navigate to a different page
+      navigate('/');
+    } catch (err) {
+      setLoading(false);
+      console.log(err);
+      setError('Failed to create a profile account');
+    }
   };
+
+  if (loading) return <div>loading...</div>;
+
   return (
-    <section>
-      <div className="register">
-        <div className="col-1">
-          <h2>Sign Up</h2>
-          <span>register and enjoy the service</span>
-        </div>
-        <form id="form" className="flex flex-col" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            value={fullName}
-            onChange={(e) => setfullName(e.target.value)}
-            placeholder="Full Name"
-          />
-          <input
-            type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email"
-          />
-          <input
-            type="text"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Password"
-          />
-          <input
-            type="text"
-            value={age}
-            onChange={(e) => setAge(e.target.value)}
-            placeholder="Age"
-          />
-          <input
-            type="text"
-            value={bloodGroup}
-            onChange={(e) => setBloodGroup(e.target.value)}
-            placeholder="Blood Group"
-          />
-          <input
-            type="text"
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
-            placeholder="Address"
-          />
-          <input
-            type="text"
-            value={phoneNumber}
-            onChange={(e) => setPhonenumber(e.target.value)}
-            placeholder="Phone number"
-          />
-
-          <select value={user} onChange={(e) => setUser(e.target.value)}>
-            <option value="Patient">Patient</option>
-            <option value="Doctor">Doctor</option>
-          </select>
-
-          <button className="btn">Submit </button>
-        </form>
-        <div className="col-2"></div>
-        <img className="regPics" src={bgImg} alt="" />
+    <div>
+      <div className={classes.mainheader}>
+        <MainHeader />
       </div>
-    </section>
+      <section>
+        <div className="register">
+          <div className="col-1">
+            <h2>Profile Sign Up</h2>
+            <span>register and enjoy the service</span>
+          </div>
+          <form id="form" className="flex flex-col" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              value={fullName}
+              onChange={(e) => setfullName(e.target.value)}
+              placeholder="Full Name"
+            />
+
+            <select value={gender} onChange={(e) => setGender(e.target.value)}>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+            <input
+              type="text"
+              value={age}
+              onChange={(e) => setAge(e.target.value)}
+              placeholder="Age"
+            />
+            <input
+              type="text"
+              value={bloodGroup}
+              onChange={(e) => setBloodGroup(e.target.value)}
+              placeholder="Blood Group"
+            />
+            <input
+              type="text"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+              placeholder="Enter City"
+            />
+            <input
+              type="text"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+              placeholder="Address"
+            />
+            <input
+              type="text"
+              value={phoneNumber}
+              onChange={(e) => setPhonenumber(e.target.value)}
+              placeholder="Phone number"
+            />
+            <input
+              type="text"
+              value={Next_of_kin_Name}
+              onChange={(e) => setNext_of_kin_Name(e.target.value)}
+              placeholder="Enter your Next of Kin Name"
+            />
+            <input
+              type="text"
+              value={Next_of_kin_phone_no}
+              onChange={(e) => setNext_of_kin_phone_no(e.target.value)}
+              placeholder="Enter your Next of Kin Phone No"
+            />
+
+            <select
+              value={userStatus}
+              onChange={(e) => setStatus(e.target.value)}
+            >
+              <option value="Patient">Patient</option>
+              <option value="Doctor">Doctor</option>
+            </select>
+
+            <button className="btn">Submit </button>
+          </form>
+          <div className="col-2"></div>
+          <img className="regPics" src={bgImg} alt="" />
+        </div>
+      </section>
+    </div>
   );
 }
+
+export default Form;

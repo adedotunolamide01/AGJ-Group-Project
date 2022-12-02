@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import useFetch from '../Fetch/useFetch';
-import Doctornav from '../Navbar/Doctornav';
+import Doctornav from '../Navbar/Patiencenav';
 import './historydetails.css';
 import { Link } from 'react-router-dom';
 
@@ -40,9 +40,9 @@ const HistoryDetails = () => {
             <p>
               <strong>Status: </strong> {datas.status}
             </p>
-            <Link to="../medicalhistory">
+            <Link to="../Patiencemedicalhistory">
               <li>
-                <a href="../medicalhistory">
+                <a href="../Patiencemedicalhistory">
                   <button>{'< < BACK'} </button>
                 </a>
               </li>

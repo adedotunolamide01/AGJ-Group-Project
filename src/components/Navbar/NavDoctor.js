@@ -2,20 +2,20 @@ import React from 'react';
 import './Nav.css';
 import { Link } from 'react-router-dom';
 
-const Doctornav = (props) => {
+const NavDoctor = (props) => {
   return (
     <header className="main-header">
       <h1>Health Management App</h1>
       <nav className="nav">
         <ul>
-          <Link to="/">
+          <Link to="/homedoctor">
             <li>
-              <a href="./frontpage">Home</a>
+              <a href="./homedoctor">Home</a>
             </li>
           </Link>
-          <Link to="/medicalhistory">
+          <Link to="/doctormedicalhistory">
             <li>
-              <a href="/medicalhistory">Medical History</a>
+              <a href="/doctormedicalhistory">Medical History</a>
             </li>
           </Link>
           <Link to="/appointment">
@@ -23,9 +23,9 @@ const Doctornav = (props) => {
               <a href="/appointment">Appointment</a>
             </li>
           </Link>
-          <Link to="/prescription">
+          <Link to="/doctorprescription">
             <li>
-              <a href=".Prescription">Prescription</a>
+              <a href=".doctorprescription">Prescription</a>
             </li>
           </Link>
           <Link to="/healthinfo">
@@ -33,9 +33,20 @@ const Doctornav = (props) => {
               <a href="/healthinfo">Health Info.</a>
             </li>
           </Link>
-
+          <Link to="/doctorpage">
+            <li>
+              <a href="./doctorpage">Doctor</a>
+            </li>
+          </Link>
+          <Link to="/form">
+            <li>
+              <a href="/healthinfo">Profile</a>
+            </li>
+          </Link>
           <li>
-            <button onClick={props.onLogout}>Logout</button>
+            <Link to="/">
+              <button onClick={props.onLogout}>Logout</button>
+            </Link>
           </li>
         </ul>
       </nav>
@@ -43,4 +54,4 @@ const Doctornav = (props) => {
   );
 };
 
-export default Doctornav;
+export default NavDoctor;

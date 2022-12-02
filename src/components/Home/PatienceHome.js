@@ -2,18 +2,28 @@ import React from 'react';
 import Card from '../UI/Card/Card';
 import classes from './Home.module.css';
 import { Link } from 'react-router-dom';
+import { useAuth } from '../Context/authContext';
 
-const Home = (props) => {
+import PatienceNav from '../Navbar/Patiencenav';
+
+const PatienceHome = (props) => {
+  const { user } = useAuth();
   return (
     <div>
+      <div>
+        <PatienceNav />
+      </div>
+
       <Card className={classes.home}>
         <h1>Welcome back!</h1>
+        <br></br>
+        <strong>{user.email}</strong>
       </Card>
       <div className={classes.DashboardContentFlex}>
         <Card className={classes.history}>
-          <Link to="./medicalhistory">
+          <Link to="../patiencemedicalhistory">
             <li>
-              <a href="../medicalhistory">
+              <a href="../Patiencemedicalhistory">
                 <h1>Medical History</h1>
               </a>
             </li>
@@ -29,9 +39,9 @@ const Home = (props) => {
           </Link>
         </Card>
         <Card className={classes.Prescription}>
-          <Link to="../prescription">
+          <Link to="../patienceprescription">
             <li>
-              <a href="../prescription">
+              <a href="../patienceprescription">
                 <h1>View Prescription</h1>
               </a>
             </li>
@@ -51,4 +61,4 @@ const Home = (props) => {
   );
 };
 
-export default Home;
+export default PatienceHome;

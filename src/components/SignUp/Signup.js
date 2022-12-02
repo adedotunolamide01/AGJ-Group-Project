@@ -1,22 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../Context/authContext';
 import Card from '../UI/Card/Card';
-import classes from './Login.module.css';
+import classes from '../Login/Login.module.css';
 import Button from '../UI/Button/Button';
 import MainHeader from '../MainHeader/MainHeader';
-import { useAuth } from '../Context/authContext';
-import { Alert } from 'react-bootstrap';
-import Footer from '../Footer/Footer';
 
-const Login = () => {
+const Signup = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
   const [emailIsValid, setEmailIsValid] = useState();
   const [enteredPassword] = useState('');
   const [passwordIsValid, setPasswordIsValid] = useState();
   const [formIsValid, setFormIsValid] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
 
   useEffect(() => {
     const identifier = setTimeout(() => {
@@ -34,35 +32,40 @@ const Login = () => {
   const validatePasswordHandler = () => {
     setPasswordIsValid(enteredPassword.trim().length > 6);
   };
-  const navigate = useNavigate();
-  const { login } = useAuth();
 
-  const submitHandler = async (e) => {
+  const { signup } = useAuth();
+  const navigate = useNavigate();
+
+  const onSubmit = async (e) => {
     e.preventDefault();
+
     try {
       setLoading(true);
       // go to db
-      await login({ email, password });
+      await signup({ email, password });
       setLoading(false);
 
       // navigate to a different page
-      navigate('/patiencehome');
+      navigate('/');
     } catch (err) {
       setLoading(false);
       console.log(err);
-      setError('You dont an account or Check Username and Password ');
+      setError('Failed to create an account');
     }
   };
 
   if (loading) return <div>loading...</div>;
+
   return (
     <div>
       <div className={classes.mainheader}>
         <MainHeader />
       </div>
+
       <Card className={classes.login}>
-        {error && <Alert variant="danger">{error}</Alert>}
-        <form onSubmit={submitHandler}>
+        <form onSubmit={onSubmit}>
+          <h1>Signup</h1>
+          {error && <p style={{ color: 'red' }}>{error}</p>}
           <div
             className={`${classes.control} ${
               emailIsValid === false ? classes.invalid : ''
@@ -101,20 +104,16 @@ const Login = () => {
               className={classes.btn}
               disabled={!formIsValid}
             >
-              Login
+              SUBMIT
             </Button>
           </div>
           <p>
-            Still not have account?
-            <Link to="/signup">
-              <strong> Click Create New Account</strong>
-            </Link>
+            Already has an account? <Link to="/">login</Link>
           </p>
         </form>
       </Card>
-      <Footer />
     </div>
   );
 };
 
-export default Login;
+export default Signup;

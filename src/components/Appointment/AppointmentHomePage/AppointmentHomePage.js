@@ -1,11 +1,11 @@
 import './AppointmentHomePage.css';
 import { Link } from 'react-router-dom';
-import Doctornav from '../../Navbar/Doctornav';
+import Patiencenav from '../../Navbar/Patiencenav';
 
 const AppointmentHome = () => {
   return (
     <div className="appointment-container">
-      <Doctornav />
+      <Patiencenav />
       <div className="appointment-home">
         <div className="appointment">
           <Link className="link" to="/viewappointment">

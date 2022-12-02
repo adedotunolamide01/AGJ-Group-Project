@@ -1,11 +1,12 @@
-import { Link } from "react-router-dom";
-import Doctornav from "../../Navbar/Doctornav";
-import "./Cancer.css";
+import { Link } from 'react-router-dom';
+import Patiencenav from '../../Navbar/Patiencenav';
+
+import './Cancer.css';
 
 const Cancer = () => {
   return (
     <div className="cancer-container">
-      <Doctornav />
+      <Patiencenav />
       <div>
         <h1 className="cancer-heading">Learn about Cancer</h1>
         <h3 className="cancer-definition">What is cancer?</h3>

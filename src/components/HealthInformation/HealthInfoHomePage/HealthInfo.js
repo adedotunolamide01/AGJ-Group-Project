@@ -1,6 +1,6 @@
-import "./HealthInfo.css";
-import { Link } from "react-router-dom";
-import Doctornav from "../../Navbar/Doctornav";
+import './HealthInfo.css';
+import { Link } from 'react-router-dom';
+import Doctornav from '../../Navbar/Patiencenav';
 
 const HealthInformation = () => {
   return (
