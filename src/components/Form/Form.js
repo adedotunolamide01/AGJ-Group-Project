@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../Context/authContext';
 import classes from '../Login/Login.module.css';
@@ -8,7 +8,9 @@ import bgImg from './regImg.jpg';
 import './Form.css';
 import { useProfile } from '../Context/ProfileContext';
 
-function Form() {
+const Form = () => {
+  const [profile, setProfile] = useState({});
+
   const [fullName, setfullName] = useState('');
   const [gender, setGender] = useState('');
   const [city, setCity] = useState('');
@@ -22,6 +24,7 @@ function Form() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
+  const { addProfile, getUserProfile, userProfile } = useProfile();
   const { user, userLoading } = useAuth();
   const navigate = useNavigate();
 
@@ -30,18 +33,29 @@ function Form() {
 
     try {
       setLoading(true);
-      // go to db
-      // await Form({ email, password });
+      await addProfile({
+        ...profile,
+        userId: user.uid,
+      });
       setLoading(false);
-
-      // navigate to a different page
+      setError('');
+      //   // navigate to a different page
       navigate('/');
     } catch (err) {
-      setLoading(false);
-      console.log(err);
+      //   setLoading(false);
       setError('Failed to create a profile account');
+      setLoading(false);
     }
   };
+  useEffect(() => {
+    if (user) getUserProfile(user.uid);
+  }, [user, getUserProfile]);
+
+  useEffect(() => {
+    if (!user & !userLoading) {
+      navigate('/login');
+    }
+  }, [user, userLoading, navigate]);
 
   if (loading) return <div>loading...</div>;
 
@@ -127,6 +141,6 @@ function Form() {
       </section>
     </div>
   );
-}
+};
 
 export default Form;
