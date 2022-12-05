@@ -46,7 +46,7 @@ const Login = () => {
       setLoading(false);
 
       // navigate to a different page
-      navigate('/patiencehome');
+      navigate('/home');
     } catch (err) {
       setLoading(false);
       console.log(err);

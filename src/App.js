@@ -1,8 +1,7 @@
 import { useAuth } from './components/Context/authContext';
-import PatienceHome from './components/Home/PatienceHome';
-
 import { Navigate } from 'react-router-dom';
-import DoctorHome from './components/Home/DoctorHome';
+
+import Home from './components/Home/Home';
 
 function App() {
   const { user, userLoading } = useAuth();
@@ -11,8 +10,7 @@ function App() {
   if (user)
     return (
       <div>
-        <DoctorHome />
-        <PatienceHome />
+        <Home />
       </div>
     );
   return (

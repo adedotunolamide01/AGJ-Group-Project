@@ -2,10 +2,11 @@ import React from 'react';
 import Card from '../UI/Card/Card';
 import classes from './Home.module.css';
 import { Link } from 'react-router-dom';
-
+import { useAuth } from '../Context/authContext';
 import NavDoctor from '../Navbar/NavDoctor';
 
 const DoctorHome = (props) => {
+  const { user } = useAuth();
   return (
     <div>
       <div>
@@ -14,6 +15,8 @@ const DoctorHome = (props) => {
 
       <Card className={classes.home}>
         <h1>Welcome back!</h1>
+        <br></br>
+        <strong>{user.email}</strong>
       </Card>
       <div className={classes.DashboardContentFlex}>
         <Card className={classes.history}>

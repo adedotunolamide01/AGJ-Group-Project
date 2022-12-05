@@ -19,14 +19,6 @@ const useProfile = () => {
 };
 
 const ProfileProvider = ({ children }) => {
-  // CRUD - REST_API
-  // BACKEND === API
-  // FRONTEND (REACT) => BACKEND (FIREBAE API) => DB
-  // C- CREATE (POST)
-  // R- READ (GET)
-  // U- UPDATE
-  // D- DELETE
-
   const [userProfile, setUserProfile] = useState();
   const [profiles, setProfiles] = useState([]);
 

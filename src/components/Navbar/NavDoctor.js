@@ -44,7 +44,7 @@ const NavDoctor = (props) => {
             </li>
           </Link>
           <li>
-            <Link to="/">
+            <Link to="/login">
               <button onClick={props.onLogout}>Logout</button>
             </Link>
           </li>

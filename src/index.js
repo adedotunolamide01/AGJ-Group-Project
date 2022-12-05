@@ -21,10 +21,10 @@ import PatiencePrescriptionPage from './components/Page/Patience/PatiencePrescri
 import PatienceMedicalHistory from './components/Page/Patience/PatienceMedicalHistory';
 import Signup from './components/SignUp/Signup.js';
 import RequiredAuth from './components/RequiredAuth/RequiredAuth';
-
 import AuthProvider from '../src/components/Context/authContext';
 import ProfileProvider from './components/Context/ProfileContext';
 import Form from './components/Form/Profile';
+import Home from './components/Home/Home';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +35,7 @@ const router = createBrowserRouter([
       </RequiredAuth>
     ),
   },
+
   {
     path: '/login',
     element: <Login />,
@@ -42,6 +43,14 @@ const router = createBrowserRouter([
   {
     path: '/signup',
     element: <Signup />,
+  },
+  {
+    path: '/home',
+    element: (
+      <RequiredAuth>
+        <Home />
+      </RequiredAuth>
+    ),
   },
   {
     path: '/patiencehome',
