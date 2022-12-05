@@ -24,7 +24,7 @@ import RequiredAuth from './components/RequiredAuth/RequiredAuth';
 
 import AuthProvider from '../src/components/Context/authContext';
 import ProfileProvider from './components/Context/ProfileContext';
-import Form from './components/Form/Form';
+import Form from './components/Form/Profile';
 
 const router = createBrowserRouter([
   {

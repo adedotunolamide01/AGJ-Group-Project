@@ -1,28 +1,28 @@
-import React from "react";
-import "./Footer.css";
+import React from 'react';
+import './Footer.css';
 
 function Footer() {
   return (
     <div className="main-footer">
-      <footer class="footer">
-        <div class="footer__addr">
-          <h1 class="footer__logo">JAG Web Developers</h1>
+      <footer className="footer">
+        <div className="footer__addr">
+          <h1 className="footer__logo">JAG Web Developers</h1>
 
           <h2>Contact</h2>
 
           <address>
             5534 Somewhere In. The World 22193-10212
-            <a class="footer__btn" href="mailto:example@gmail.com">
+            <a className="footer__btn" href="mailto:example@gmail.com">
               Email Us
             </a>
           </address>
         </div>
 
-        <ul class="footer__nav">
-          <li class="nav__item">
-            <h2 class="nav__title">Media</h2>
+        <ul className="footer__nav">
+          <li className="nav__item">
+            <h2 className="nav__title">Media</h2>
 
-            <ul class="nav__ul">
+            <ul className="nav__ul">
               <li>
                 <a href="#">Online</a>
               </li>
@@ -37,10 +37,10 @@ function Footer() {
             </ul>
           </li>
 
-          <li class="nav__item nav__item--extra">
-            <h2 class="nav__title">Technology</h2>
+          <li className="nav__item nav__item--extra">
+            <h2 className="nav__title">Technology</h2>
 
-            <ul class="nav__ul nav__ul--extra">
+            <ul className="nav__ul nav__ul--extra">
               <li>
                 <a href="#">Hardware Design</a>
               </li>
@@ -67,10 +67,10 @@ function Footer() {
             </ul>
           </li>
 
-          <li class="nav__item">
-            <h2 class="nav__title">Legal</h2>
+          <li className="nav__item">
+            <h2 className="nav__title">Legal</h2>
 
-            <ul class="nav__ul">
+            <ul className="nav__ul">
               <li>
                 <a href="#">Privacy Policy</a>
               </li>
@@ -86,12 +86,12 @@ function Footer() {
           </li>
         </ul>
 
-        <div class="legal">
+        <div className="legal">
           <p>&copy; 2019 Something. All rights reserved.</p>
 
-          <div class="legal__links">
+          <div className="legal__links">
             <span>
-              Made with <span class="heart">♥</span> remotely from Anywhere
+              Made with <span className="heart">♥</span> remotely from Anywhere
             </span>
           </div>
         </div>
