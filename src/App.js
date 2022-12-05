@@ -1,6 +1,8 @@
 import { useAuth } from './components/Context/authContext';
 import PatienceHome from './components/Home/PatienceHome';
+
 import { Navigate } from 'react-router-dom';
+import DoctorHome from './components/Home/DoctorHome';
 
 function App() {
   const { user, userLoading } = useAuth();
@@ -9,6 +11,7 @@ function App() {
   if (user)
     return (
       <div>
+        <DoctorHome />
         <PatienceHome />
       </div>
     );
