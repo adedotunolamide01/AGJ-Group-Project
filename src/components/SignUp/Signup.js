@@ -46,7 +46,7 @@ const Signup = () => {
       setLoading(false);
 
       // navigate to a different page
-      navigate('/');
+      navigate('/home');
     } catch (err) {
       setLoading(false);
       console.log(err);
@@ -108,7 +108,7 @@ const Signup = () => {
             </Button>
           </div>
           <p>
-            Already has an account? <Link to="/">login</Link>
+            Already has an account? <Link to="/login">login</Link>
           </p>
         </form>
       </Card>

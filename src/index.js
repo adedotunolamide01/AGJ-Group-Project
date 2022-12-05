@@ -23,9 +23,9 @@ import Signup from './components/SignUp/Signup.js';
 import RequiredAuth from './components/RequiredAuth/RequiredAuth';
 import AuthProvider from '../src/components/Context/authContext';
 import ProfileProvider from './components/Context/ProfileContext';
-import Form from './components/Form/Profile';
 import Home from './components/Home/Home';
 import Profiledoc from './components/Form/Profiledoc';
+import Profile from './components/Form/Profile';
 
 const router = createBrowserRouter([
   {
@@ -178,7 +178,7 @@ const router = createBrowserRouter([
     path: '/profile',
     element: (
       <RequiredAuth>
-        <Form />
+        <Profile />
       </RequiredAuth>
     ),
   },
