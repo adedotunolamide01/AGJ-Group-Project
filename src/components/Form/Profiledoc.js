@@ -7,9 +7,9 @@ import React from 'react';
 import bgImg from './regImg.jpg';
 import './Form.css';
 import { useProfile } from '../Context/ProfileContext';
-import Patiencenav from '../Navbar/Patiencenav';
+import NavDoctor from '../Navbar/NavDoctor';
 
-const Profile = () => {
+const Profiledoc = () => {
   const [loading, setLoading] = useState(false);
   const [setError] = useState('');
 
@@ -42,7 +42,7 @@ const Profile = () => {
       setLoading(false);
       setError('');
       //   // navigate to a different page
-      navigate('/PatienceHome');
+      navigate('/doctorhome');
     } catch (err) {
       //   setLoading(false);
       setError('Failed to create a profile account');
@@ -65,7 +65,7 @@ const Profile = () => {
     return (
       <div>
         <div className={classes.mainheader}>
-          <Patiencenav />
+          <NavDoctor />
         </div>
         <section>
           <div className="register">
@@ -179,7 +179,7 @@ const Profile = () => {
                 <option value="Doctor">Doctor</option>
               </select>
 
-              <button className="btn" onClick={() => navigate('/login')}>
+              <button className="btn" onClick={() => navigate('/doctorhome')}>
                 Submit{' '}
               </button>
             </form>
@@ -191,4 +191,4 @@ const Profile = () => {
     );
 };
 
-export default Profile;
+export default Profiledoc;

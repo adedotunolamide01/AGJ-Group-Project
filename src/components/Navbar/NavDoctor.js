@@ -8,7 +8,7 @@ const NavDoctor = (props) => {
       <h1>Health Management App</h1>
       <nav className="nav">
         <ul>
-          <Link to="/homedoctor">
+          <Link to="/doctorhome">
             <li>
               <a href="./homedoctor">Home</a>
             </li>
@@ -38,7 +38,7 @@ const NavDoctor = (props) => {
               <a href="./doctorpage">Doctor</a>
             </li>
           </Link>
-          <Link to="/form">
+          <Link to="/profiledoc">
             <li>
               <a href="/healthinfo">Profile</a>
             </li>
