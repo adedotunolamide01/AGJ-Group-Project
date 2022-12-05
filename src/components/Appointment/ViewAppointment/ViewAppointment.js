@@ -6,7 +6,7 @@ import './ViewAppointment.css';
 const ViewAppointment = () => {
   const [fetchedData, setFetchedData] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:8000/datas`)
+    fetch(`http://localhost:8001/datas`)
       .then((response) => {
         return response.json();
       })
