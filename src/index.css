@@ -9,6 +9,7 @@ html {
 
 body {
   margin: 0;
+  background: #fff;
 }
 
 main {
@@ -36,6 +37,6 @@ code {
 /* base styles */
 * {
   margin: 0;
-  font-family: 'Quicksand';
-  color: #333;
+  /* font-family: 'Quicksand'; */
+  /* color: #333; */
 }
