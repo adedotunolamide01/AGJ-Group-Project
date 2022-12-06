@@ -17,8 +17,13 @@
     },
     {
       "reason": "vomiting and high temperature, suspecting fever",
-      "apptDate": "2022-12-14",
+      "apptDate": "2022-12-12",
       "id": 4
+    },
+    {
+      "reason": "I don't feel well, sick and vomit",
+      "apptDate": "2022-12-16",
+      "id": 5
     }
   ]
 }
