@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import PatienceNav from '../../Navbar/Patiencenav';
+import NavDoctor from '../../Navbar/NavDoctor';
+
 import './ViewAppointment.css';
 
 const DocViewAppointment = () => {
@@ -18,7 +19,7 @@ const DocViewAppointment = () => {
   return (
     <div className="view-appointment-container">
       <div className="appointment-display-home">
-        <PatienceNav />
+        <NavDoctor />
         <div className="appointment-display">
           {fetchedData.map((data) => {
             const savedApptDate = new Date(data.apptDate);
@@ -50,7 +51,7 @@ const DocViewAppointment = () => {
           })}
         </div>
         <div className="back-button">
-          <Link to="/appointment">
+          <Link to="/docappointmenthome">
             <button className="btn">
               <svg
                 className="appointment-back-svg"

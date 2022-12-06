@@ -6,7 +6,7 @@ import App from './App';
 import AppointmentHome from './components/Appointment/AppointmentHomePage/AppointmentHomePage';
 import BookAppointment from './components/Appointment/BookAppointment.js/BookAppointment';
 import ViewAppointment from './components/Appointment/ViewAppointment/ViewAppointment';
-import Cancer from './components/HealthInformation/Cancer/Cancer';
+import Cancer from './components/HealthInformation/Cancer/DocCancer';
 import Diabetes from './components/HealthInformation/Diabetes/Diabetes';
 import HealthInformation from './components/HealthInformation/HealthInfoHomePage/HealthInfo';
 import Stroke from './components/HealthInformation/Stroke/Stroke';
@@ -28,6 +28,11 @@ import Profiledoc from './components/Form/Profiledoc';
 import Profile from './components/Form/Profile';
 import DocViewAppointment from './components/Appointment/ViewAppointment/DocViewAppointment';
 import DocBookAppointment from './components/Appointment/BookAppointment.js/DocBookAppointment';
+import DocAppointmentHome from './components/Appointment/AppointmentHomePage/DocAppointmentHomePage';
+import DocDiabetes from './components/HealthInformation/Diabetes/DocDiabetes';
+import DocHealthInformation from './components/HealthInformation/HealthInfoHomePage/DocHealthInfo';
+import DocCancer from './components/HealthInformation/Cancer/DocCancer';
+import DocStroke from './components/HealthInformation/Stroke/DocStroke';
 
 const router = createBrowserRouter([
   {
@@ -148,6 +153,14 @@ const router = createBrowserRouter([
     ),
   },
   {
+    path: '/docappointmenthome',
+    element: (
+      <RequiredAuth>
+        <DocAppointmentHome />
+      </RequiredAuth>
+    ),
+  },
+  {
     path: '/docbookappointment',
     element: (
       <RequiredAuth>
@@ -163,19 +176,20 @@ const router = createBrowserRouter([
       </RequiredAuth>
     ),
   },
-  {
-    path: '/docbookappointment',
-    element: (
-      <RequiredAuth>
-        <DocBookAppointment />
-      </RequiredAuth>
-    ),
-  },
+
   {
     path: '/healthinfo',
     element: (
       <RequiredAuth>
         <HealthInformation />
+      </RequiredAuth>
+    ),
+  },
+  {
+    path: '/dochealthinfo',
+    element: (
+      <RequiredAuth>
+        <DocHealthInformation />
       </RequiredAuth>
     ),
   },
@@ -188,10 +202,34 @@ const router = createBrowserRouter([
     ),
   },
   {
+    path: '/docdiabetes',
+    element: (
+      <RequiredAuth>
+        <DocDiabetes />
+      </RequiredAuth>
+    ),
+  },
+  {
     path: '/cancer',
     element: (
       <RequiredAuth>
         <Cancer />
+      </RequiredAuth>
+    ),
+  },
+  {
+    path: '/doccancer',
+    element: (
+      <RequiredAuth>
+        <DocCancer />
+      </RequiredAuth>
+    ),
+  },
+  {
+    path: '/docstroke',
+    element: (
+      <RequiredAuth>
+        <DocStroke />
       </RequiredAuth>
     ),
   },

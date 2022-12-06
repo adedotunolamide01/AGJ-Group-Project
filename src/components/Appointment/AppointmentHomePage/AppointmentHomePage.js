@@ -1,6 +1,7 @@
 import './AppointmentHomePage.css';
 import { Link } from 'react-router-dom';
 import Patiencenav from '../../Navbar/Patiencenav';
+import Footer from '../../Footer/Footer';
 
 const AppointmentHome = () => {
   return (
@@ -46,6 +47,7 @@ const AppointmentHome = () => {
           </button>
         </Link>
       </div>
+      <Footer />
     </div>
   );
 };
