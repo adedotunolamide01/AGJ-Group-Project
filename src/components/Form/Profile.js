@@ -55,6 +55,13 @@ const Profile = () => {
     if (user) getUserProfile(user.uid);
   }, [user, getUserProfile]);
 
+  //loading userpage
+  useEffect(() => {
+    if (userProfile.status === 'doctor') {
+      navigate('/dochome');
+    }
+  }, [userProfile, navigate]);
+
   useEffect(() => {
     if (!user & !userLoading) {
       navigate('/login');
@@ -63,7 +70,7 @@ const Profile = () => {
 
   if (loading) return <div>loading...</div>;
 
-  if (userProfile)
+  if (user)
     return (
       <div className="history-details">
         <div className="create">

@@ -18,9 +18,9 @@ const NavDoctor = (props) => {
               <a href="/doctormedicalhistory">Medical History</a>
             </li>
           </Link>
-          <Link to="/appointment">
+          <Link to="/docbookappointment">
             <li>
-              <a href="/appointment">Appointment</a>
+              <a href="/docbookappointment">Appointment</a>
             </li>
           </Link>
           <Link to="/doctorprescription">
@@ -41,6 +41,11 @@ const NavDoctor = (props) => {
           <Link to="/profiledoc">
             <li>
               <a href="/healthinfo">Profile</a>
+            </li>
+          </Link>
+          <Link to="/patiencehome">
+            <li>
+              <a href="/patiencehome">Patient</a>
             </li>
           </Link>
           <li>

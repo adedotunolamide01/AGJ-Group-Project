@@ -1,25 +1,26 @@
-import React from 'react';
-import { useState } from 'react';
-import Doctorhistory from '../../ListHistory/Doctorhistory';
-import NavDoctor from '../../Navbar/NavDoctor';
-import './DoctorCss.css';
+import React from "react";
+import { useState } from "react";
+import Doctorhistory from "../../ListHistory/Doctorhistory";
+import NavDoctor from "../../Navbar/NavDoctor";
+import "./DoctorCss.css";
+import Footer from "../../Footer/Footer";
 
 const Doctorpage = () => {
-  const [date, setdate] = useState('');
-  const [complain, setComplain] = useState('');
-  const [assement, setAssement] = useState('');
-  const [issue, setIssue] = useState('');
-  const [treatment, setTreatment] = useState('');
-  const [status, setStatus] = useState('');
-  const [reset] = useState('');
+  const [date, setdate] = useState("");
+  const [complain, setComplain] = useState("");
+  const [assement, setAssement] = useState("");
+  const [issue, setIssue] = useState("");
+  const [treatment, setTreatment] = useState("");
+  const [status, setStatus] = useState("");
+  const [reset] = useState("");
 
   const handleSubmit = (e) => {
     // e.preventDefault();
     const healthData = { date, complain, assement, issue, treatment, reset };
 
-    fetch('http://localhost:8000/datas', {
-      method: 'POST',
-      headers: { 'Content-type': 'application/json' },
+    fetch("http://localhost:8000/datas", {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
       body: JSON.stringify(healthData),
     }).then(() => {});
   };
@@ -108,7 +109,7 @@ const Doctorpage = () => {
                   id="treatment"
                   name="treatment"
                   placeholder="Write something.."
-                  style={{ height: '100px' }}
+                  style={{ height: "100px" }}
                   required
                   value={treatment}
                   onChange={(e) => setTreatment(e.target.value)}
@@ -141,6 +142,7 @@ const Doctorpage = () => {
         <h2>Medical History</h2>
         <Doctorhistory />
       </div>
+      <Footer />
     </div>
   );
 };

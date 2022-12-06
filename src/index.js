@@ -26,8 +26,23 @@ import ProfileProvider from './components/Context/ProfileContext';
 import Home from './components/Home/Home';
 import Profiledoc from './components/Form/Profiledoc';
 import Profile from './components/Form/Profile';
+import DocViewAppointment from './components/Appointment/ViewAppointment/DocViewAppointment';
+import DocBookAppointment from './components/Appointment/BookAppointment.js/DocBookAppointment';
 
 const router = createBrowserRouter([
+  {
+    path: '/login',
+    element: <Login />,
+  },
+  {
+    path: '/home',
+    element: (
+      <RequiredAuth>
+        <Home />
+      </RequiredAuth>
+    ),
+  },
+
   {
     path: '/',
     element: (
@@ -38,21 +53,10 @@ const router = createBrowserRouter([
   },
 
   {
-    path: '/login',
-    element: <Login />,
-  },
-  {
     path: '/signup',
     element: <Signup />,
   },
-  {
-    path: '/home',
-    element: (
-      <RequiredAuth>
-        <Home />
-      </RequiredAuth>
-    ),
-  },
+
   {
     path: '/patiencehome',
     element: (
@@ -74,7 +78,7 @@ const router = createBrowserRouter([
     path: '/patiencemedicalhistory',
     element: (
       <RequiredAuth>
-        <PatienceMedicalHistory />{' '}
+        <PatienceMedicalHistory />
       </RequiredAuth>
     ),
   },
@@ -118,6 +122,7 @@ const router = createBrowserRouter([
       </RequiredAuth>
     ),
   },
+
   {
     path: '/history/:id',
     element: (
@@ -135,10 +140,34 @@ const router = createBrowserRouter([
     ),
   },
   {
+    path: '/docviewappointment',
+    element: (
+      <RequiredAuth>
+        <DocViewAppointment />
+      </RequiredAuth>
+    ),
+  },
+  {
+    path: '/docbookappointment',
+    element: (
+      <RequiredAuth>
+        <DocBookAppointment />
+      </RequiredAuth>
+    ),
+  },
+  {
     path: '/bookappointment',
     element: (
       <RequiredAuth>
         <BookAppointment />
+      </RequiredAuth>
+    ),
+  },
+  {
+    path: '/docbookappointment',
+    element: (
+      <RequiredAuth>
+        <DocBookAppointment />
       </RequiredAuth>
     ),
   },

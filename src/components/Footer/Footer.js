@@ -1,5 +1,5 @@
-import React from 'react';
-import './Footer.css';
+import React from "react";
+import "./Footer.css";
 
 function Footer() {
   return (
@@ -87,7 +87,7 @@ function Footer() {
         </ul>
 
         <div className="legal">
-          <p>&copy; 2019 Something. All rights reserved.</p>
+          <p>&copy; 2022 Something. All rights reserved.</p>
 
           <div className="legal__links">
             <span>
