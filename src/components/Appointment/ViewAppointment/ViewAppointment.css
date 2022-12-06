@@ -11,15 +11,28 @@ p {
 }
 
 .appointment-display {
-  width: 80%;
+  width: 100%;
   height: 40vh;
-  padding: 2rem 0 0 5rem;
+  padding: 2rem 2rem;
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
 .appointment-display-text {
+  display: flex;
   padding: 0.5rem 0;
+}
+
+.appt-date {
+  color: #dd0db0;
+}
+
+.view-btn {
+  background-color: #dd0db0;
+  color: white;
+  border: 1px solid #dd0db0;
+  padding: 0.2rem 1rem;
+  border-radius: 1rem;
 }
 
 .close-btn {
@@ -38,7 +51,7 @@ p {
 }
 
 span {
-  margin-left: 2rem;
+  margin: 0 2rem;
 }
 
 .back-button {

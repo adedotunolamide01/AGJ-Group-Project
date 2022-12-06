@@ -1,0 +1,31 @@
+.edit-appointment-container {
+  margin: 8rem 2rem;
+}
+
+.edit-btn {
+  margin-top: 2rem;
+}
+.cancel {
+  background-color: grey;
+  border: 1px solid grey;
+  color: white;
+  padding: 0.2rem 1rem;
+  border-radius: 1rem;
+}
+
+.save {
+  background-color: #dd0db0;
+  border: 1px solid #dd0db0;
+  color: white;
+  padding: 0.2rem 1rem;
+  border-radius: 1rem;
+  margin: 0 1rem;
+}
+
+.delete-btn {
+  background-color: red;
+  color: white;
+  border: 1px solid red;
+  padding: 0.2rem 1rem;
+  border-radius: 1rem;
+}

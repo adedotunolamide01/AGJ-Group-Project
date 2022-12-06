@@ -1,26 +1,35 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import NavDoctor from '../../Navbar/NavDoctor';
+import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import NavDoctor from "../../Navbar/NavDoctor";
+import "./BookAppointment.css";
 
-import './BookAppointment.css';
+import "./BookAppointment.css";
 
-const DocBookAppointment = () => {
-  const [reason, setReason] = useState('');
-  const [apptDate, setApptDate] = useState('');
+const BookAppointment = () => {
+  const [reason, setReason] = useState("");
+  const [apptDate, setApptDate] = useState(
+    new Date().toISOString().substring(0, 10)
+  );
+  const [isPending, setIsPending] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const datas = { reason, apptDate };
-    fetch(`http://localhost:8000/datas`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+    setIsPending(true);
+    fetch(`http://localhost:8001/datas`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+
       body: JSON.stringify(datas),
     }).then(() => {
-      alert('Your booking has been sent successfully.');
+      setIsPending(false);
+      alert("Your booking has been sent successfully.");
+      navigate("/viewappointment");
     });
 
-    setReason('');
-    setApptDate('');
+    setReason("");
+    setApptDate(new Date().toISOString().substring(0, 10));
   };
 
   return (
@@ -28,7 +37,7 @@ const DocBookAppointment = () => {
       <NavDoctor />
       <h1 className="booking-heading">Book your appointment!</h1>
       <form className="form" onSubmit={handleSubmit}>
-        <label for="reason">Reason for appointment:</label>
+        <label>Reason for appointment:</label>
         <textarea
           className="textarea"
           rows="4"
@@ -40,7 +49,7 @@ const DocBookAppointment = () => {
           required
         ></textarea>
 
-        <label for="date">Choose date:</label>
+        <label>Choose date:</label>
         <input
           className="input"
           type="date"
@@ -51,7 +60,17 @@ const DocBookAppointment = () => {
         />
 
         <div className="book-btn">
-          <input className="submit" type="submit" value="Book Now" />
+          {!isPending && (
+            <input className="submit" type="submit" value="Book Now" />
+          )}
+          {isPending && (
+            <input
+              disabled
+              className="submit"
+              type="submit"
+              value="Booking..."
+            />
+          )}
         </div>
       </form>
       <div className="back-button">
@@ -72,4 +91,4 @@ const DocBookAppointment = () => {
   );
 };
 
-export default DocBookAppointment;
+export default BookAppointment;
