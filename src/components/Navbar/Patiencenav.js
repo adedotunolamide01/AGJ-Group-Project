@@ -37,7 +37,7 @@ const Patiencenav = (props) => {
           </Link>
           <Link to="/profile">
             <li>
-              <a href="/healthinfo">Profile</a>
+              <a href="/profile">Profile</a>
             </li>
           </Link>
 
