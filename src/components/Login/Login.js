@@ -1,26 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import Card from '../UI/Card/Card';
-import classes from './Login.module.css';
-import Button from '../UI/Button/Button';
-import MainHeader from '../MainHeader/MainHeader';
-import { useAuth } from '../Context/authContext';
-import { Alert } from 'react-bootstrap';
-import Footer from '../Footer/Footer';
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import Card from "../UI/Card/Card";
+import classes from "./Login.module.css";
+import Button from "../UI/Button/Button";
+import MainHeader from "../MainHeader/MainHeader";
+import { useAuth } from "../Context/authContext";
+import { Alert } from "react-bootstrap";
+import Footer from "../Footer/Footer";
 
 const Login = () => {
   const [emailIsValid, setEmailIsValid] = useState();
-  const [enteredPassword] = useState('');
+  const [enteredPassword] = useState("");
   const [passwordIsValid, setPasswordIsValid] = useState();
   const [formIsValid, setFormIsValid] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [error, setError] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   useEffect(() => {
     const identifier = setTimeout(() => {
-      setFormIsValid(email.includes('@') && password.trim().length > 6);
+      setFormIsValid(email.includes("@") && password.trim().length > 6);
     }, 500);
     return () => {
       clearTimeout(identifier);
@@ -28,7 +28,7 @@ const Login = () => {
   }, [email, password]);
 
   const validateEmailHandler = () => {
-    setEmailIsValid(email.includes('@'));
+    setEmailIsValid(email.includes("@"));
   };
 
   const validatePasswordHandler = () => {
@@ -46,11 +46,11 @@ const Login = () => {
       setLoading(false);
 
       // navigate to a different page
-      navigate('/home');
+      navigate("/home");
     } catch (err) {
       setLoading(false);
       console.log(err);
-      setError('You dont an account or Check Username and Password ');
+      setError("You dont an account or Check Username and Password ");
     }
   };
 
@@ -65,7 +65,7 @@ const Login = () => {
         <form onSubmit={submitHandler}>
           <div
             className={`${classes.control} ${
-              emailIsValid === false ? classes.invalid : ''
+              emailIsValid === false ? classes.invalid : ""
             }`}
           >
             <label htmlFor="email">E-Mail</label>
@@ -81,7 +81,7 @@ const Login = () => {
           </div>
           <div
             className={`${classes.control} ${
-              passwordIsValid === false ? classes.invalid : ''
+              passwordIsValid === false ? classes.invalid : ""
             }`}
           >
             <label htmlFor="password">Password</label>
@@ -104,14 +104,17 @@ const Login = () => {
               Login
             </Button>
           </div>
-          <p>
-            Still not have account?
-            <Link to="/signup">
-              <strong> Click Create New Account</strong>
-            </Link>
-          </p>
+          <div className={classes.createAccount}>
+            <p>
+              Still not have account?
+              <Link to="/signup">
+                <strong> Click Create New Account</strong>
+              </Link>
+            </p>
+          </div>
         </form>
       </Card>
+      <div className={classes.mainheader}></div>
       <Footer />
     </div>
   );

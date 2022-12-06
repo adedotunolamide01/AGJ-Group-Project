@@ -1,7 +1,8 @@
-import React from 'react';
-import Prescription from '../../ListHistory/Prescription';
-import PatienceNav from '../../Navbar/Patiencenav';
-import './PatienceCss.css';
+import React from "react";
+import Prescription from "../../ListHistory/Prescription";
+import PatienceNav from "../../Navbar/Patiencenav";
+import "./PatienceCss.css";
+import Footer from "../../Footer/Footer";
 
 const PatiencePrescriptionPage = () => {
   return (
@@ -16,6 +17,7 @@ const PatiencePrescriptionPage = () => {
           <Prescription />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

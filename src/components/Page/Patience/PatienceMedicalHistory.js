@@ -1,7 +1,8 @@
-import React from 'react';
-import History from '../../ListHistory/History';
-import PatienceNav from '../../Navbar/Patiencenav';
-import './PatienceCss.css';
+import React from "react";
+import History from "../../ListHistory/History";
+import PatienceNav from "../../Navbar/Patiencenav";
+import "./PatienceCss.css";
+import Footer from "../../Footer/Footer";
 
 const PatienceMedicalHistory = () => {
   return (
@@ -16,6 +17,7 @@ const PatienceMedicalHistory = () => {
           <History />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

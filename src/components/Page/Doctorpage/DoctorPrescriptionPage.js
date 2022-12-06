@@ -1,7 +1,8 @@
-import React from 'react';
-import Prescription from '../../ListHistory/Prescription';
-import NavDoctor from '../../Navbar/NavDoctor';
-import './DoctorCss.css';
+import React from "react";
+import Prescription from "../../ListHistory/Prescription";
+import NavDoctor from "../../Navbar/NavDoctor";
+import "./DoctorCss.css";
+import Footer from "../../Footer/Footer";
 
 const DoctorPrescriptionPage = () => {
   return (
@@ -16,6 +17,7 @@ const DoctorPrescriptionPage = () => {
           <Prescription />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
