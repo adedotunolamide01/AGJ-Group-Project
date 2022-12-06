@@ -32,7 +32,7 @@ const PatienceHome = (props) => {
                 <h1>Medical History</h1>
               </a>
             </li>
-            <img className="regPics" src={hisImg} alt="" />
+            <img className={classes.regPics} src={hisImg} alt="" />
           </Link>
         </Card>
         <Card className={classes.appointment}>
@@ -42,7 +42,7 @@ const PatienceHome = (props) => {
                 <h1>Appointment</h1>
               </a>
             </li>
-            <img className="regPics" src={aptImg} alt="" />
+            <img className={classes.regPics} src={aptImg} alt="" />
           </Link>
         </Card>
         <Card className={classes.Prescription}>
@@ -52,7 +52,7 @@ const PatienceHome = (props) => {
                 <h1>View Prescription</h1>
               </a>
             </li>
-            <img className="regPics" src={pxImg} alt="" />
+            <img className={classes.regPics} src={pxImg} alt="" />
           </Link>
         </Card>
         <Card className={classes.information}>
@@ -62,7 +62,7 @@ const PatienceHome = (props) => {
                 <h1>Health Information</h1>
               </a>
             </li>
-            <img className="regPics" src={infImg} alt="" />
+            <img className={classes.regPics} src={infImg} alt="" />
           </Link>
         </Card>
       </div>

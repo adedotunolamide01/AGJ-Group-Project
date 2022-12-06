@@ -1,6 +1,6 @@
 .home {
-  width: 90%;
-  max-width: 40rem;
+  width: 100%;
+  max-width: 52rem;
   padding: 3rem;
   margin: 2rem auto;
   text-align: center;
@@ -20,31 +20,66 @@
 .history {
   width: 400px;
   height: 400px;
-  background-color: rgb(223, 215, 222);
+  background-color: white;
   text-align: center;
 }
-
+.history h1 {
+  padding: 10px;
+}
 .appointment {
   width: 400px;
   height: 400px;
-  background-color: rgb(175, 173, 175);
+  background-color: white;
   text-align: center;
 }
 
 .Prescription {
   width: 400px;
   height: 400px;
-  background-color: rgb(175, 173, 175);
+  background-color: white;
   text-align: center;
 }
 
 .information {
   width: 400px;
   height: 400px;
-  background-color: rgb(223, 215, 222);
+  background-color: white;
   text-align: center;
 }
 a {
   text-decoration-line: none;
   list-style-type: none;
+}
+
+.regPic {
+  filter: invert(9%) sepia(99%) saturate(3655%) hue-rotate(286deg)
+    brightness(110%) contrast(98%);
+  width: 250px;
+}
+.regPics {
+  filter: invert(9%) sepia(99%) saturate(3655%) hue-rotate(286deg)
+    brightness(110%) contrast(98%);
+  width: 250px;
+}
+
+.boardCopy {
+  background: #4f005f;
+  width: 250px;
+  padding: 10px;
+  border-radius: 60px;
+  color: white;
+}
+
+.boardCopy p {
+  color: white;
+}
+.boardCop {
+  background: #e322f6;
+  width: 250px;
+  padding: 10px;
+  border-radius: 60px;
+  color: white;
+}
+.boardCop p {
+  color: white;
 }
