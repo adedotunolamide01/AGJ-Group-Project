@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import Patiencenav from "../../Navbar/Patiencenav";
+import NavDoctor from "../../Navbar/NavDoctor";
+import "./BookAppointment.css";
+
 import "./BookAppointment.css";
 
 const BookAppointment = () => {
@@ -32,7 +34,7 @@ const BookAppointment = () => {
 
   return (
     <div className="booking-container">
-      <Patiencenav />
+      <NavDoctor />
       <h1 className="booking-heading">Book your appointment!</h1>
       <form className="form" onSubmit={handleSubmit}>
         <label>Reason for appointment:</label>
@@ -72,7 +74,7 @@ const BookAppointment = () => {
         </div>
       </form>
       <div className="back-button">
-        <Link to="/appointment">
+        <Link to="/docappointmenthome">
           <button className="btn">
             <svg
               className="appointment-back-svg"

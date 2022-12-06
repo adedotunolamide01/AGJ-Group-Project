@@ -28,8 +28,6 @@ import Profiledoc from "./components/Form/Profiledoc";
 import Profile from "./components/Form/Profile";
 import DocViewAppointment from "./components/Appointment/ViewAppointment/DocViewAppointment";
 import DocBookAppointment from "./components/Appointment/BookAppointment.js/DocBookAppointment";
-import EditAppointment from "./components/Appointment/EditAppointment/EditAppointment";
-import NotFound from "./components/NotFound/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -165,11 +163,12 @@ const router = createBrowserRouter([
       </RequiredAuth>
     ),
   },
+
   {
     path: "/docbookappointment",
     element: (
       <RequiredAuth>
-        <DocBookAppointment />
+        <HealthInformation />
       </RequiredAuth>
     ),
   },
@@ -177,7 +176,7 @@ const router = createBrowserRouter([
     path: "/healthinfo",
     element: (
       <RequiredAuth>
-        <HealthInformation />
+        <DocHealthInformation />
       </RequiredAuth>
     ),
   },

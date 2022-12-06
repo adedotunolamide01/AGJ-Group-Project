@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import Patiencenav from "../../Navbar/Patiencenav";
+import NavDoctor from "../../Navbar/NavDoctor";
+
 import useAppFetch from "./useAppFetch";
 import "./ViewAppointment.css";
 
@@ -12,7 +13,7 @@ const ViewAppointment = () => {
 
   return (
     <div className="view-appointment-container">
-      <Patiencenav />
+      <NavDoctor />
       <div className="appointment-display-home">
         <div className="appointment-display">
           {error && <div>{error}</div>}
@@ -53,7 +54,7 @@ const ViewAppointment = () => {
             })}
         </div>
         <div className="back-button">
-          <Link to="/appointment">
+          <Link to="/docappointmenthome">
             <button className="btn">
               <svg
                 className="appointment-back-svg"

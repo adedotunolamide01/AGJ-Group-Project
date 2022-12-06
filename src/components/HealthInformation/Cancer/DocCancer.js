@@ -2,13 +2,12 @@ import { Link } from 'react-router-dom';
 import Footer from '../../Footer/Footer';
 
 import './Cancer.css';
+import NavDoctor from '../../Navbar/NavDoctor';
 
-import Patiencenav from '../../Navbar/Patiencenav';
-
-const Cancer = () => {
+const DocCancer = () => {
   return (
     <div className="cancer-container">
-      <Patiencenav />
+      <NavDoctor />
       <div>
         <h1 className="cancer-heading">Learn about Cancer</h1>
         <h3 className="cancer-definition">What is cancer?</h3>
@@ -122,7 +121,7 @@ const Cancer = () => {
           <a href="https://www.cancer.gov/about-cancer">
             <button className="learn-btn">Learn more about cancer here</button>
           </a>
-          <Link to="/healthinfo">
+          <Link to="/dochealthinfo">
             <button className="btn">
               <svg
                 className="cancer-back-svg"
@@ -141,4 +140,4 @@ const Cancer = () => {
   );
 };
 
-export default Cancer;
+export default DocCancer;

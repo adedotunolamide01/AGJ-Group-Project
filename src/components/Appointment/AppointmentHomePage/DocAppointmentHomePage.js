@@ -8,7 +8,7 @@ const DocAppointmentHome = () => {
       <NavDoctor />
       <div className="appointment-home">
         <div className="appointment">
-          <Link className="link" to="/viewappointment">
+          <Link className="link" to="/docviewappointment">
             View Appointment
             <svg
               className="appointment-home-svg"
@@ -20,7 +20,7 @@ const DocAppointmentHome = () => {
           </Link>
         </div>
         <div className="appointment">
-          <Link className="link" to="/bookappointment">
+          <Link className="link" to="/docbookappointment">
             Book Appointment
             <svg
               className="appointment-home-svg"
