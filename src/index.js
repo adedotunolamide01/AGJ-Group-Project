@@ -29,21 +29,8 @@ import Profile from './components/Form/Profile';
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: (
-      <RequiredAuth>
-        <App />
-      </RequiredAuth>
-    ),
-  },
-
-  {
     path: '/login',
     element: <Login />,
-  },
-  {
-    path: '/signup',
-    element: <Signup />,
   },
   {
     path: '/home',
@@ -53,6 +40,21 @@ const router = createBrowserRouter([
       </RequiredAuth>
     ),
   },
+
+  {
+    path: '/',
+    element: (
+      <RequiredAuth>
+        <App />
+      </RequiredAuth>
+    ),
+  },
+
+  {
+    path: '/signup',
+    element: <Signup />,
+  },
+
   {
     path: '/patiencehome',
     element: (
@@ -74,7 +76,7 @@ const router = createBrowserRouter([
     path: '/patiencemedicalhistory',
     element: (
       <RequiredAuth>
-        <PatienceMedicalHistory />{' '}
+        <PatienceMedicalHistory />
       </RequiredAuth>
     ),
   },

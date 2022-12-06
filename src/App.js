@@ -6,18 +6,20 @@ import Home from './components/Home/Home';
 function App() {
   const { user, userLoading } = useAuth();
 
-  if (userLoading) return <div>loading...</div>;
-  if (user)
+  if (!user && userLoading)
+    return (
+      <div className="App">
+        <div>loading...</div>;
+        <Navigate to="/login" />;
+      </div>
+    );
+  else {
     return (
       <div>
         <Home />
       </div>
     );
-  return (
-    <div className="App">
-      <Navigate to="/login" />;
-    </div>
-  );
+  }
 }
 
 export default App;
