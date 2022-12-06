@@ -12,9 +12,8 @@ p {
 .form {
   display: flex;
   flex-direction: column;
-  margin: 0 10rem;
   padding: 5rem;
-  width: 80% auto;
+  width: 100%;
 }
 
 .textarea {
@@ -48,7 +47,6 @@ p {
   border: 0.1rem solid #dd0db0;
   color: white;
   border-radius: 0.5rem;
-  width: 20%;
   margin-top: 0.5rem;
   cursor: pointer;
 }

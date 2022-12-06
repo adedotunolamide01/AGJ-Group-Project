@@ -1,54 +1,57 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import NavDoctor from '../../Navbar/NavDoctor';
+import { Link } from "react-router-dom";
+import NavDoctor from "../../Navbar/NavDoctor";
 
-import './ViewAppointment.css';
+import useAppFetch from "./useAppFetch";
+import "./ViewAppointment.css";
 
-const DocViewAppointment = () => {
-  const [fetchedData, setFetchedData] = useState([]);
-  useEffect(() => {
-    fetch(`http://localhost:8001/datas`)
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setFetchedData(data);
-      });
-  }, []);
+const ViewAppointment = () => {
+  const {
+    data: fetchedData,
+    isPending,
+    error,
+  } = useAppFetch(`http://localhost:8001/datas`);
 
   return (
     <div className="view-appointment-container">
+      <NavDoctor />
       <div className="appointment-display-home">
-        <NavDoctor />
         <div className="appointment-display">
-          {fetchedData.map((data) => {
-            const savedApptDate = new Date(data.apptDate);
-            const currentDate = new Date();
-            if (savedApptDate.getTime() >= currentDate.getTime()) {
-              return (
-                <p className="appointment-display-text">
-                  Your next appointment is {data.apptDate}
-                </p>
-              );
-            } else {
-              console.log('You do not have any pending appointment');
-            }
-          })}
+          {error && <div>{error}</div>}
+          {isPending && <div>Loading... </div>}
+          {fetchedData &&
+            fetchedData.map((data) => {
+              const savedApptDate = new Date(data.apptDate);
+              const currentDate = new Date();
+              if (savedApptDate.getTime() >= currentDate.getTime()) {
+                return (
+                  <div className="appointment-display-text" key={data.id}>
+                    <p>
+                      Your next appointment is{" "}
+                      <span className="appt-date"> {data.apptDate}</span>
+                    </p>
+                    <Link to={`/edit/${data.id}`}>
+                      <button className="view-btn">View</button>
+                    </Link>
+                  </div>
+                );
+              }
+            })}
         </div>
         <div className="appointment-history">
           <h3 className="appointment-history-heading">Appointment History</h3>
-          {fetchedData.map((data) => {
-            const savedApptDate = new Date(data.apptDate);
-            const currentDate = new Date();
-            if (savedApptDate.getTime() < currentDate.getTime()) {
-              return (
-                <li>
-                  {data.apptDate}
-                  <span>{data.reason}</span>
-                </li>
-              );
-            }
-          })}
+          {fetchedData &&
+            fetchedData.map((data) => {
+              const savedApptDate = new Date(data.apptDate);
+              const currentDate = new Date();
+              if (savedApptDate.getTime() < currentDate.getTime()) {
+                return (
+                  <li key={data.id}>
+                    {data.apptDate}
+                    <span>{data.reason}</span>
+                  </li>
+                );
+              }
+            })}
         </div>
         <div className="back-button">
           <Link to="/docappointmenthome">
@@ -69,4 +72,4 @@ const DocViewAppointment = () => {
   );
 };
 
-export default DocViewAppointment;
+export default ViewAppointment;
