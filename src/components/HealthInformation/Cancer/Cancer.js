@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
-import Patiencenav from "../../Navbar/Patiencenav";
-import Footer from "../../Footer/Footer";
+import { Link } from 'react-router-dom';
+import Footer from '../../Footer/Footer';
 
-import "./Cancer.css";
+import './Cancer.css';
+
+import Patiencenav from '../../Navbar/Patiencenav';
 
 const Cancer = () => {
   return (
