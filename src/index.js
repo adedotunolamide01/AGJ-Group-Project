@@ -26,6 +26,8 @@ import ProfileProvider from './components/Context/ProfileContext';
 import Home from './components/Home/Home';
 import Profiledoc from './components/Form/Profiledoc';
 import Profile from './components/Form/Profile';
+import DocViewAppointment from './components/Appointment/ViewAppointment/DocViewAppointment';
+import DocBookAppointment from './components/Appointment/BookAppointment.js/DocBookAppointment';
 
 const router = createBrowserRouter([
   {
@@ -120,6 +122,7 @@ const router = createBrowserRouter([
       </RequiredAuth>
     ),
   },
+
   {
     path: '/history/:id',
     element: (
@@ -137,10 +140,34 @@ const router = createBrowserRouter([
     ),
   },
   {
+    path: '/docviewappointment',
+    element: (
+      <RequiredAuth>
+        <DocViewAppointment />
+      </RequiredAuth>
+    ),
+  },
+  {
+    path: '/docbookappointment',
+    element: (
+      <RequiredAuth>
+        <DocBookAppointment />
+      </RequiredAuth>
+    ),
+  },
+  {
     path: '/bookappointment',
     element: (
       <RequiredAuth>
         <BookAppointment />
+      </RequiredAuth>
+    ),
+  },
+  {
+    path: '/docbookappointment',
+    element: (
+      <RequiredAuth>
+        <DocBookAppointment />
       </RequiredAuth>
     ),
   },
