@@ -1,6 +1,6 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Doctornav from "../../Navbar/Doctornav";
 import "./BookAppointment.css";
 
 const BookAppointment = () => {
@@ -8,29 +8,33 @@ const BookAppointment = () => {
   const [apptDate, setApptDate] = useState(
     new Date().toISOString().substring(0, 10)
   );
+  const [isPending, setIsPending] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const datas = { reason, apptDate };
+    setIsPending(true);
     fetch(`http://localhost:5000/datas`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
 
       body: JSON.stringify(datas),
     }).then(() => {
+      setIsPending(false);
       alert("Your booking has been sent successfully.");
+      navigate("/viewappointment");
     });
 
     setReason("");
-    setApptDate("");
+    setApptDate(new Date().toISOString().substring(0, 10));
   };
 
   return (
     <div className="booking-container">
-      <Doctornav />
       <h1 className="booking-heading">Book your appointment!</h1>
       <form className="form" onSubmit={handleSubmit}>
-        <label for="reason">Reason for appointment:</label>
+        <label>Reason for appointment:</label>
         <textarea
           className="textarea"
           rows="4"
@@ -42,7 +46,7 @@ const BookAppointment = () => {
           required
         ></textarea>
 
-        <label for="date">Choose date:</label>
+        <label>Choose date:</label>
         <input
           className="input"
           type="date"
@@ -53,7 +57,17 @@ const BookAppointment = () => {
         />
 
         <div className="book-btn">
-          <input className="submit" type="submit" value="Book Now" />
+          {!isPending && (
+            <input className="submit" type="submit" value="Book Now" />
+          )}
+          {isPending && (
+            <input
+              disabled
+              className="submit"
+              type="submit"
+              value="Booking..."
+            />
+          )}
         </div>
       </form>
       <div className="back-button">

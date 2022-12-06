@@ -26,15 +26,12 @@
 .nav li {
   margin: 0;
   margin-left: 2rem;
-}
-
-.nav a {
   text-decoration: none;
   color: white;
 }
 
-.nav a:hover,
-.nav a:active {
+.nav li:hover,
+.nav li:active {
   color: #f3cafb;
 }
 

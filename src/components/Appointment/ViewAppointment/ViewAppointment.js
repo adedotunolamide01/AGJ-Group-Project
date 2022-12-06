@@ -1,44 +1,17 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Doctornav from "../../Navbar/Doctornav";
+import useAppFetch from "./useAppFetch";
 import "./ViewAppointment.css";
 
 const ViewAppointment = () => {
-  const [fetchedData, setFetchedData] = useState([]);
-  const [isPending, setIsPending] = useState(true);
-  const [error, setError] = useState("");
-
-  const handleDelete = (id) => {
-    const newData = fetchedData.filter((appData) => appData.id !== id);
-    setFetchedData(newData);
-  };
-
-  function getAppointment() {
-    fetch(`http://localhost:5000/datas`)
-      .then((response) => {
-        if (!response.ok) {
-          throw Error("Fetching data failed.");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setFetchedData(data);
-        setIsPending(false);
-        setError(null);
-      })
-      .catch((err) => {
-        setError(err.message);
-        setIsPending(false);
-      });
-  }
-  useEffect(() => {
-    getAppointment();
-  }, []);
+  const {
+    data: fetchedData,
+    isPending,
+    error,
+  } = useAppFetch(`http://localhost:5000/datas`);
 
   return (
     <div className="view-appointment-container">
       <div className="appointment-display-home">
-        <Doctornav />
         <div className="appointment-display">
           {error && <div>{error}</div>}
           {isPending && <div>Loading... </div>}
@@ -46,24 +19,18 @@ const ViewAppointment = () => {
             fetchedData.map((data) => {
               const savedApptDate = new Date(data.apptDate);
               const currentDate = new Date();
-              console.log(
-                "saved date " + savedApptDate,
-                "current date " + currentDate
-              );
               if (savedApptDate.getTime() >= currentDate.getTime()) {
                 return (
                   <div className="appointment-display-text" key={data.id}>
-                    <p>Your next appointment is {data.apptDate}</p>
-                    <button
-                      className="delete-btn"
-                      onClick={() => handleDelete(data.id)}
-                    >
-                      Delete
-                    </button>
+                    <p>
+                      Your next appointment is{" "}
+                      <span className="appt-date"> {data.apptDate}</span>
+                    </p>
+                    <Link to={`/edit/${data.id}`}>
+                      <button className="view-btn">View</button>
+                    </Link>
                   </div>
                 );
-              } else {
-                console.log("You do not have any pending appointment");
               }
             })}
         </div>
@@ -72,6 +39,7 @@ const ViewAppointment = () => {
           {fetchedData &&
             fetchedData.map((data) => {
               const savedApptDate = new Date(data.apptDate);
+              // debugger;
               const currentDate = new Date();
               if (savedApptDate.getTime() < currentDate.getTime()) {
                 return (

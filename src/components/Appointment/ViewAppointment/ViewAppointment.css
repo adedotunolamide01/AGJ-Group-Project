@@ -23,10 +23,14 @@ p {
   padding: 0.5rem 0;
 }
 
-.delete-btn {
-  background-color: red;
+.appt-date {
+  color: #dd0db0;
+}
+
+.view-btn {
+  background-color: #dd0db0;
   color: white;
-  border: 1px solid red;
+  border: 1px solid #dd0db0;
   padding: 0.2rem 1rem;
   border-radius: 1rem;
 }

@@ -11,10 +11,14 @@ import Frontpage from "./components/Page/FrontPage";
 import MedicalHistory from "./components/Page/MedicalHistory";
 import Prescription from "./components/Page/PrescriptionPage";
 import HistoryDetails from "./components/ListHistory/HistoryDetails";
+import EditAppointment from "./components/Appointment/EditAppointment/EditAppointment";
+import Doctornav from "./components/Navbar/Doctornav";
+import NotFound from "./components/NotFound/NotFound";
 
 function App() {
   return (
     <div>
+      <Doctornav />
       <Routes>
         <Route path="/" element={<Frontpage />} />
         <Route path="/frontpage" element={<Frontpage />} />
@@ -29,6 +33,8 @@ function App() {
         <Route path="/diabetes" element={<Diabetes />} />
         <Route path="/cancer" element={<Cancer />} />
         <Route path="/stroke" element={<Stroke />} />
+        <Route path="/edit/:id" element={<EditAppointment />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

@@ -1,8 +1,6 @@
-import { useParams } from 'react-router-dom';
-import useFetch from '../Fetch/useFetch';
-import Doctornav from '../Navbar/Doctornav';
-import './historydetails.css';
-import { Link } from 'react-router-dom';
+import { useParams, Link } from "react-router-dom";
+import useFetch from "../Fetch/useFetch";
+import "./historydetails.css";
 
 const HistoryDetails = () => {
   const { id } = useParams();
@@ -10,13 +8,11 @@ const HistoryDetails = () => {
     data: datas,
     error,
     isPending,
-  } = useFetch('http://localhost:8000/datas/' + id);
+  } = useFetch("http://localhost:8000/datas/" + id);
 
   return (
     <div className="history-details">
-      <div className="create">
-        <Doctornav />
-      </div>
+      <div className="create"></div>
       <div>
         {isPending && <div>Loading...</div>}
         {error && <div>{error}</div>}
@@ -43,7 +39,7 @@ const HistoryDetails = () => {
             <Link to="../medicalhistory">
               <li>
                 <a href="../medicalhistory">
-                  <button>{'< < BACK'} </button>
+                  <button>{"< < BACK"} </button>
                 </a>
               </li>
             </Link>

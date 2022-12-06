@@ -1,26 +1,24 @@
-import React from 'react';
-import { useState } from 'react';
-import Doctorhistory from '../ListHistory/Doctorhistory';
-
-import Doctornav from '../Navbar/Doctornav';
-import './DoctorCss.css';
+import React from "react";
+import { useState } from "react";
+import Doctorhistory from "../ListHistory/Doctorhistory";
+import "./DoctorCss.css";
 
 const Doctorpage = () => {
-  const [date, setdate] = useState('');
-  const [complain, setComplain] = useState('');
-  const [assement, setAssement] = useState('');
-  const [issue, setIssue] = useState('');
-  const [treatment, setTreatment] = useState('');
-  const [status, setStatus] = useState('');
-  const [reset] = useState('');
+  const [date, setdate] = useState("");
+  const [complain, setComplain] = useState("");
+  const [assement, setAssement] = useState("");
+  const [issue, setIssue] = useState("");
+  const [treatment, setTreatment] = useState("");
+  const [status, setStatus] = useState("");
+  const [reset] = useState("");
 
   const handleSubmit = (e) => {
     // e.preventDefault();
     const healthData = { date, complain, assement, issue, treatment, reset };
 
-    fetch('http://localhost:8000/datas', {
-      method: 'POST',
-      headers: { 'Content-type': 'application/json' },
+    fetch("http://localhost:8000/datas", {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
       body: JSON.stringify(healthData),
     }).then(() => {});
   };
@@ -28,7 +26,6 @@ const Doctorpage = () => {
   return (
     <div>
       <div className="create">
-        <Doctornav />
         <div className="doctorForm">
           <form onSubmit={handleSubmit}>
             <div className="row">
@@ -109,7 +106,7 @@ const Doctorpage = () => {
                   id="treatment"
                   name="treatment"
                   placeholder="Write something.."
-                  style={{ height: '100px' }}
+                  style={{ height: "100px" }}
                   required
                   value={treatment}
                   onChange={(e) => setTreatment(e.target.value)}

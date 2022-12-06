@@ -1,11 +1,9 @@
 import "./HealthInfo.css";
 import { Link } from "react-router-dom";
-import Doctornav from "../../Navbar/Doctornav";
 
 const HealthInformation = () => {
   return (
     <div className="healthinfo-container">
-      <Doctornav />
       <h1 className="healthinfo-heading">Health Information page</h1>
       <div className="healthinfo-quote">
         <q>

@@ -1,14 +1,11 @@
-import React from 'react';
-import History from '../ListHistory/History';
-
-import Doctornav from '../Navbar/Doctornav';
-import './DoctorCss.css';
+import React from "react";
+import History from "../ListHistory/History";
+import "./DoctorCss.css";
 
 const MedicalHistory = () => {
   return (
     <div>
       <div className="create">
-        <Doctornav />
         <div>
           <h2>Medical History</h2>
         </div>
