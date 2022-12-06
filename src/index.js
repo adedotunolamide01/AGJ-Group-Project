@@ -1,44 +1,47 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./index.css";
-import App from "./App";
-import AppointmentHome from "./components/Appointment/AppointmentHomePage/AppointmentHomePage";
-import BookAppointment from "./components/Appointment/BookAppointment.js/BookAppointment";
-import ViewAppointment from "./components/Appointment/ViewAppointment/ViewAppointment";
-import Cancer from "./components/HealthInformation/Cancer/Cancer";
-import Diabetes from "./components/HealthInformation/Diabetes/Diabetes";
-import HealthInformation from "./components/HealthInformation/HealthInfoHomePage/HealthInfo";
-import Stroke from "./components/HealthInformation/Stroke/Stroke";
-import Doctorpage from "./components/Page/Doctorpage/Doctorpage";
-import HistoryDetails from "./components/ListHistory/HistoryDetails";
-import Login from "./components/Login/Login";
-import DoctorHome from "./components/Home/DoctorHome";
-import PatienceHome from "./components/Home/PatienceHome";
-import DoctorMedicalHistory from "./components/Page/Doctorpage/DoctorMedicalHistory";
-import DoctorPrescriptionPage from "./components/Page/Doctorpage/DoctorPrescriptionPage";
-import PatiencePrescriptionPage from "./components/Page/Patience/PatiencePrescriptionPage";
-import PatienceMedicalHistory from "./components/Page/Patience/PatienceMedicalHistory";
-import Signup from "./components/SignUp/Signup.js";
-import RequiredAuth from "./components/RequiredAuth/RequiredAuth";
-import AuthProvider from "../src/components/Context/authContext";
-import ProfileProvider from "./components/Context/ProfileContext";
-import Home from "./components/Home/Home";
-import Profiledoc from "./components/Form/Profiledoc";
-import Profile from "./components/Form/Profile";
-import DocViewAppointment from "./components/Appointment/ViewAppointment/DocViewAppointment";
-import DocBookAppointment from "./components/Appointment/BookAppointment.js/DocBookAppointment";
-import EditAppointment from "./components/Appointment/EditAppointment/EditAppointment";
-import NotFound from "./components/NotFound/NotFound";
-import DocHealthInformation from "./components/HealthInformation/HealthInfoHomePage/DocHealthInfo";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import './index.css';
+import App from './App';
+import AppointmentHome from './components/Appointment/AppointmentHomePage/AppointmentHomePage';
+import BookAppointment from './components/Appointment/BookAppointment.js/BookAppointment';
+import ViewAppointment from './components/Appointment/ViewAppointment/ViewAppointment';
+import Cancer from './components/HealthInformation/Cancer/Cancer';
+import Diabetes from './components/HealthInformation/Diabetes/Diabetes';
+import HealthInformation from './components/HealthInformation/HealthInfoHomePage/HealthInfo';
+import Stroke from './components/HealthInformation/Stroke/Stroke';
+import Doctorpage from './components/Page/Doctorpage/Doctorpage';
+import HistoryDetails from './components/ListHistory/HistoryDetails';
+import Login from './components/Login/Login';
+import DoctorHome from './components/Home/DoctorHome';
+import PatienceHome from './components/Home/PatienceHome';
+import DoctorMedicalHistory from './components/Page/Doctorpage/DoctorMedicalHistory';
+import DoctorPrescriptionPage from './components/Page/Doctorpage/DoctorPrescriptionPage';
+import PatiencePrescriptionPage from './components/Page/Patience/PatiencePrescriptionPage';
+import PatienceMedicalHistory from './components/Page/Patience/PatienceMedicalHistory';
+import Signup from './components/SignUp/Signup.js';
+import RequiredAuth from './components/RequiredAuth/RequiredAuth';
+import AuthProvider from '../src/components/Context/authContext';
+import ProfileProvider from './components/Context/ProfileContext';
+import Home from './components/Home/Home';
+import Profiledoc from './components/Form/Profiledoc';
+import Profile from './components/Form/Profile';
+import DocViewAppointment from './components/Appointment/ViewAppointment/DocViewAppointment';
+import DocBookAppointment from './components/Appointment/BookAppointment.js/DocBookAppointment';
+import EditAppointment from './components/Appointment/EditAppointment/EditAppointment';
+import NotFound from './components/NotFound/NotFound';
+import DocHealthInformation from './components/HealthInformation/HealthInfoHomePage/DocHealthInfo';
+import DocDiabetes from './components/HealthInformation/Diabetes/DocDiabetes';
+import DocCancer from './components/HealthInformation/Cancer/DocCancer';
+import DocStroke from './components/HealthInformation/Stroke/DocStroke';
 
 const router = createBrowserRouter([
   {
-    path: "/login",
+    path: '/login',
     element: <Login />,
   },
   {
-    path: "/home",
+    path: '/home',
     element: (
       <RequiredAuth>
         <Home />
@@ -47,7 +50,7 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/",
+    path: '/',
     element: (
       <RequiredAuth>
         <App />
@@ -56,12 +59,12 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/signup",
+    path: '/signup',
     element: <Signup />,
   },
 
   {
-    path: "/patiencehome",
+    path: '/patiencehome',
     element: (
       <RequiredAuth>
         <PatienceHome />
@@ -69,7 +72,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/patienceprescription",
+    path: '/patienceprescription',
 
     element: (
       <RequiredAuth>
@@ -78,7 +81,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/patiencemedicalhistory",
+    path: '/patiencemedicalhistory',
     element: (
       <RequiredAuth>
         <PatienceMedicalHistory />
@@ -86,7 +89,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/doctorhome",
+    path: '/doctorhome',
     element: (
       <RequiredAuth>
         <DoctorHome />
@@ -94,7 +97,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/doctorpage",
+    path: '/doctorpage',
     element: (
       <RequiredAuth>
         <Doctorpage />
@@ -102,7 +105,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/doctormedicalhistory",
+    path: '/doctormedicalhistory',
     element: (
       <RequiredAuth>
         <DoctorMedicalHistory />
@@ -110,7 +113,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/doctorprescription",
+    path: '/doctorprescription',
     element: (
       <RequiredAuth>
         <DoctorPrescriptionPage />
@@ -118,7 +121,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/appointment",
+    path: '/appointment',
     element: (
       <RequiredAuth>
         <AppointmentHome />
@@ -127,7 +130,7 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/history/:id",
+    path: '/history/:id',
     element: (
       <RequiredAuth>
         <HistoryDetails />
@@ -135,7 +138,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/viewappointment",
+    path: '/viewappointment',
     element: (
       <RequiredAuth>
         <ViewAppointment />
@@ -143,7 +146,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/docviewappointment",
+    path: '/docviewappointment',
     element: (
       <RequiredAuth>
         <DocViewAppointment />
@@ -151,7 +154,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/docbookappointment",
+    path: '/docbookappointment',
     element: (
       <RequiredAuth>
         <DocBookAppointment />
@@ -159,7 +162,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/bookappointment",
+    path: '/bookappointment',
     element: (
       <RequiredAuth>
         <BookAppointment />
@@ -168,7 +171,7 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/docbookappointment",
+    path: '/docbookappointment',
     element: (
       <RequiredAuth>
         <HealthInformation />
@@ -176,7 +179,15 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/healthinfo",
+    path: '/healthinfo',
+    element: (
+      <RequiredAuth>
+        <HealthInformation />
+      </RequiredAuth>
+    ),
+  },
+  {
+    path: '/dochealthinfo',
     element: (
       <RequiredAuth>
         <DocHealthInformation />
@@ -184,7 +195,15 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/diabetes",
+    path: '/docdiabetes',
+    element: (
+      <RequiredAuth>
+        <DocDiabetes />
+      </RequiredAuth>
+    ),
+  },
+  {
+    path: '/diabetes',
     element: (
       <RequiredAuth>
         <Diabetes />
@@ -192,7 +211,15 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/cancer",
+    path: '/doccancer',
+    element: (
+      <RequiredAuth>
+        <DocCancer />
+      </RequiredAuth>
+    ),
+  },
+  {
+    path: '/cancer',
     element: (
       <RequiredAuth>
         <Cancer />
@@ -200,7 +227,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/stroke",
+    path: '/stroke',
     element: (
       <RequiredAuth>
         <Stroke />
@@ -208,7 +235,15 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/profile",
+    path: '/docstroke',
+    element: (
+      <RequiredAuth>
+        <DocStroke />
+      </RequiredAuth>
+    ),
+  },
+  {
+    path: '/profile',
     element: (
       <RequiredAuth>
         <Profile />
@@ -216,7 +251,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/Profiledoc",
+    path: '/Profiledoc',
     element: (
       <RequiredAuth>
         <Profiledoc />
@@ -224,7 +259,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/edit/:id",
+    path: '/edit/:id',
     element: (
       <RequiredAuth>
         <EditAppointment />
@@ -232,7 +267,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "*",
+    path: '*',
     element: (
       <RequiredAuth>
         <NotFound />
@@ -241,7 +276,7 @@ const router = createBrowserRouter([
   },
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <AuthProvider>

@@ -1,15 +1,15 @@
-import React from "react";
-import Card from "../UI/Card/Card";
-import classes from "./Home.module.css";
-import { Link } from "react-router-dom";
-import { useAuth } from "../Context/authContext";
-import Footer from "../Footer/Footer";
-import aptImg from "./Icons/appointment.png";
-import pxImg from "./Icons/prescription.png";
-import infImg from "./Icons/information.png";
-import hisImg from "./Icons/history.png";
+import React from 'react';
+import Card from '../UI/Card/Card';
+import classes from './Home.module.css';
+import { Link } from 'react-router-dom';
+import { useAuth } from '../Context/authContext';
+import Footer from '../Footer/Footer';
+import aptImg from './Icons/appointment.png';
+import pxImg from './Icons/prescription.png';
+import infImg from './Icons/information.png';
+import hisImg from './Icons/history.png';
 
-import PatienceNav from "../Navbar/Patiencenav";
+import PatienceNav from '../Navbar/Patiencenav';
 
 const PatienceHome = (props) => {
   const { user } = useAuth();
@@ -20,9 +20,9 @@ const PatienceHome = (props) => {
       </div>
 
       <Card className={classes.home}>
-        <h1>Welcome back!</h1>
-        <br></br>
-        <strong>{user.email}</strong>
+        <h1>
+          <strong>{user.email}</strong>
+        </h1>
       </Card>
       <div className={classes.DashboardContentFlex}>
         <Card className={classes.history}>
