@@ -47,7 +47,7 @@ const Signup = () => {
       setLoading(false);
 
       // navigate to a different page
-      navigate('/home');
+      navigate("/home");
     } catch (err) {
       setLoading(false);
       console.log(err);
@@ -108,17 +108,9 @@ const Signup = () => {
               SUBMIT
             </Button>
           </div>
-<<<<<<< HEAD
-          <div className={classes.alreadyAccount}>
-            <p>
-              Already has an account? <Link to="/">login</Link>
-            </p>
-          </div>
-=======
           <p>
             Already has an account? <Link to="/login">login</Link>
           </p>
->>>>>>> 103b8767498cc611e647df2442010382784d3217
         </form>
       </Card>
       <Footer />
