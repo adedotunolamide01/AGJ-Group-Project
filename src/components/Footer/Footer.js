@@ -23,17 +23,11 @@ function Footer() {
             <h2 className="nav__title">Media</h2>
 
             <ul className="nav__ul">
-              <li>
-                <a href="#">Online</a>
-              </li>
+              <li>Online</li>
 
-              <li>
-                <a href="#">Print</a>
-              </li>
+              <li>Print</li>
 
-              <li>
-                <a href="#">Alternative Ads</a>
-              </li>
+              <li>Alternative Ads</li>
             </ul>
           </li>
 
@@ -41,29 +35,17 @@ function Footer() {
             <h2 className="nav__title">Technology</h2>
 
             <ul className="nav__ul nav__ul--extra">
-              <li>
-                <a href="#">Hardware Design</a>
-              </li>
+              <li>Hardware Design</li>
 
-              <li>
-                <a href="#">Software Design</a>
-              </li>
+              <li>Software Design</li>
 
-              <li>
-                <a href="#">Digital Signage</a>
-              </li>
+              <li>Digital Signage</li>
 
-              <li>
-                <a href="#">Automation</a>
-              </li>
+              <li>Automation</li>
 
-              <li>
-                <a href="#">Artificial Intelligence</a>
-              </li>
+              <li>Artificial Intelligence</li>
 
-              <li>
-                <a href="#">IoT</a>
-              </li>
+              <li>IoT</li>
             </ul>
           </li>
 
@@ -71,17 +53,11 @@ function Footer() {
             <h2 className="nav__title">Legal</h2>
 
             <ul className="nav__ul">
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
+              <li>Privacy Policy</li>
 
-              <li>
-                <a href="#">Terms of Use</a>
-              </li>
+              <li>Terms of Use</li>
 
-              <li>
-                <a href="#">Sitemap</a>
-              </li>
+              <li>Sitemap</li>
             </ul>
           </li>
         </ul>
