@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  background-image: url(../src/components/image/white.jpg);
 }
 
 html {
@@ -10,7 +11,6 @@ html {
 body {
   margin: 0;
   background: #fff;
-  background-image: url(../src/components/image/white.jpg);
 }
 
 main {
