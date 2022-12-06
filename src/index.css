@@ -5,12 +5,12 @@
 html {
   font-family: sans-serif;
   background: #fff;
-  background-image: url(../src/components/image/white.jpg);
 }
 
 body {
   margin: 0;
   background: #fff;
+  background-image: url(../src/components/image/white.jpg);
 }
 
 main {
