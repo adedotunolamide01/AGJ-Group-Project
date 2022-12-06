@@ -28,6 +28,9 @@ import Profiledoc from "./components/Form/Profiledoc";
 import Profile from "./components/Form/Profile";
 import DocViewAppointment from "./components/Appointment/ViewAppointment/DocViewAppointment";
 import DocBookAppointment from "./components/Appointment/BookAppointment.js/DocBookAppointment";
+import EditAppointment from "./components/Appointment/EditAppointment/EditAppointment";
+import NotFound from "./components/NotFound/NotFound";
+import DocHealthInformation from "./components/HealthInformation/HealthInfoHomePage/DocHealthInfo";
 
 const router = createBrowserRouter([
   {
