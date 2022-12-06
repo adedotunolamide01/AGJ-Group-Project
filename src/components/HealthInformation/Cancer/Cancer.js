@@ -1,7 +1,8 @@
-import { Link } from 'react-router-dom';
-import Patiencenav from '../../Navbar/Patiencenav';
+import { Link } from "react-router-dom";
+import Patiencenav from "../../Navbar/Patiencenav";
+import Footer from "../../Footer/Footer";
 
-import './Cancer.css';
+import "./Cancer.css";
 
 const Cancer = () => {
   return (
@@ -134,6 +135,7 @@ const Cancer = () => {
           </Link>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

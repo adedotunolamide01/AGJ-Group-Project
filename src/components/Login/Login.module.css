@@ -48,6 +48,14 @@
   text-align: center;
 }
 
+.createAccount {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.alreadyAccount {
+}
+
 @media (min-width: 768px) {
   .control {
     align-items: center;

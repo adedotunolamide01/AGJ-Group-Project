@@ -1,7 +1,8 @@
-import React from 'react';
-import History from '../../ListHistory/History';
-import NavDoctor from '../../Navbar/NavDoctor';
-import './DoctorCss.css';
+import React from "react";
+import History from "../../ListHistory/History";
+import NavDoctor from "../../Navbar/NavDoctor";
+import "./DoctorCss.css";
+import Footer from "../../Footer/Footer";
 
 const DoctorMedicalHistory = () => {
   return (
@@ -16,6 +17,7 @@ const DoctorMedicalHistory = () => {
           <History />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

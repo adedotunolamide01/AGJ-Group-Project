@@ -1,24 +1,25 @@
-import { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../Context/authContext';
-import Card from '../UI/Card/Card';
-import classes from '../Login/Login.module.css';
-import Button from '../UI/Button/Button';
-import MainHeader from '../MainHeader/MainHeader';
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../Context/authContext";
+import Card from "../UI/Card/Card";
+import classes from "../Login/Login.module.css";
+import Button from "../UI/Button/Button";
+import MainHeader from "../MainHeader/MainHeader";
+import Footer from "../Footer/Footer";
 
 const Signup = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [emailIsValid, setEmailIsValid] = useState();
-  const [enteredPassword] = useState('');
+  const [enteredPassword] = useState("");
   const [passwordIsValid, setPasswordIsValid] = useState();
   const [formIsValid, setFormIsValid] = useState(false);
 
   useEffect(() => {
     const identifier = setTimeout(() => {
-      setFormIsValid(email.includes('@') && password.trim().length > 6);
+      setFormIsValid(email.includes("@") && password.trim().length > 6);
     }, 500);
     return () => {
       clearTimeout(identifier);
@@ -26,7 +27,7 @@ const Signup = () => {
   }, [email, password]);
 
   const validateEmailHandler = () => {
-    setEmailIsValid(email.includes('@'));
+    setEmailIsValid(email.includes("@"));
   };
 
   const validatePasswordHandler = () => {
@@ -46,11 +47,11 @@ const Signup = () => {
       setLoading(false);
 
       // navigate to a different page
-      navigate('/');
+      navigate("/");
     } catch (err) {
       setLoading(false);
       console.log(err);
-      setError('Failed to create an account');
+      setError("Failed to create an account");
     }
   };
 
@@ -65,10 +66,10 @@ const Signup = () => {
       <Card className={classes.login}>
         <form onSubmit={onSubmit}>
           <h1>Signup</h1>
-          {error && <p style={{ color: 'red' }}>{error}</p>}
+          {error && <p style={{ color: "red" }}>{error}</p>}
           <div
             className={`${classes.control} ${
-              emailIsValid === false ? classes.invalid : ''
+              emailIsValid === false ? classes.invalid : ""
             }`}
           >
             <label htmlFor="email">E-Mail</label>
@@ -84,7 +85,7 @@ const Signup = () => {
           </div>
           <div
             className={`${classes.control} ${
-              passwordIsValid === false ? classes.invalid : ''
+              passwordIsValid === false ? classes.invalid : ""
             }`}
           >
             <label htmlFor="password">Password</label>
@@ -107,11 +108,14 @@ const Signup = () => {
               SUBMIT
             </Button>
           </div>
-          <p>
-            Already has an account? <Link to="/">login</Link>
-          </p>
+          <div className={classes.alreadyAccount}>
+            <p>
+              Already has an account? <Link to="/">login</Link>
+            </p>
+          </div>
         </form>
       </Card>
+      <Footer />
     </div>
   );
 };
