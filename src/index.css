@@ -1,11 +1,11 @@
 * {
   box-sizing: border-box;
-  background-image: url(../src/components/image/white.jpg);
+  /* background-image: url(../src/components/image/white.jpg); */
 }
 
 html {
   font-family: sans-serif;
-  background: #fff;
+  /* background: #fff; */
 }
 
 body {
