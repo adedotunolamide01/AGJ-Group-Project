@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
+import DeleteModal from "../../DeleteModal.js/DeleteModal";
 import Patiencenav from "../../Navbar/Patiencenav";
 import useAppFetch from "../ViewAppointment/useAppFetch";
 import "./EditAppointment.css";
@@ -16,9 +17,13 @@ const EditAppointment = () => {
   const [reason, setReason] = useState("");
   const [apptDate, setApptDate] = useState("");
   const url = `http://localhost:8001/datas/`;
+  const [openModal, setOpenModal] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
+  };
+
+  const handleUpdate = () => {
     const datas = { reason, apptDate };
 
     fetch(url + fetchedData.id, {
@@ -42,54 +47,54 @@ const EditAppointment = () => {
     }
   }, [fetchedData]);
 
-  const handleDelete = () => {
-    fetch(url + fetchedData.id, {
-      method: "DELETE",
-    }).then(() => {
-      navigate("/viewappointment");
-    });
-  };
-
   return (
-    <div className="edit-appointment-container">
-      <Patiencenav />
-      <h2>Edit appointment</h2>
-      {isPending && <div>Loading...</div>}
-      {error && <div>{error}</div>}
-      {fetchedData && (
-        <div>
-          <form onSubmit={handleSubmit} className="form">
-            <label>Reason for appointment:</label>
-            <textarea
-              className="textarea"
-              rows="4"
-              cols="50"
-              name="reason"
-              value={reason}
-              onChange={(e) => setReason(e.target.value)}
-            ></textarea>
+    <div>
+      {openModal && <DeleteModal setOpenModal={setOpenModal} />}
+      <div className="edit-appointment-container">
+        <Patiencenav />
+        <h2>Edit appointment</h2>
+        {isPending && <div>Loading...</div>}
+        {error && <div>{error}</div>}
+        {fetchedData && (
+          <div>
+            <form onSubmit={handleSubmit} className="form">
+              <label>Reason for appointment:</label>
+              <textarea
+                className="textarea"
+                rows="4"
+                cols="50"
+                name="reason"
+                value={reason}
+                onChange={(e) => setReason(e.target.value)}
+              ></textarea>
 
-            <label>Choose date:</label>
-            <input
-              className="input"
-              type="date"
-              name="date:"
-              value={apptDate}
-              onChange={(e) => setApptDate(e.target.value)}
-            />
+              <label>Choose date:</label>
+              <input
+                className="input"
+                type="date"
+                name="date:"
+                value={apptDate}
+                onChange={(e) => setApptDate(e.target.value)}
+              />
 
-            <div className="edit-btn">
-              <Link to="/viewappointment">
-                <button className="cancel">Cancel</button>
-              </Link>
-              <input className="save" type="submit" value="Save" />
-              <button className="delete-btn" onClick={handleDelete}>
-                Delete
-              </button>
-            </div>
-          </form>
-        </div>
-      )}
+              <div className="edit-btn">
+                <Link to="/viewappointment">
+                  <button className="cancel">Cancel</button>
+                </Link>
+                <button onClick={handleUpdate} className="save" type="submit">
+                  Save
+                </button>
+                <button
+                  className="delete-btn"
+                  onClick={() => setOpenModal(true)}
+                >
+                  Delete
+                </button>
+              </div>
+            </form>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
