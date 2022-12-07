@@ -60,7 +60,7 @@ const HealthInformation = () => {
         </p>
 
         <div className="healthinfo-button">
-          <Link>
+          <Link to="/patiencehome">
             <button className="btn">
               <svg
                 className="healthinfo-back-svg"
