@@ -2,12 +2,19 @@ p {
   font-weight: 500;
 }
 
+.appointment-container {
+  display: flex;
+  flex-direction: column;
+  /* margin: 5rem; */
+}
+
 .appointment-home {
   display: flex;
   justify-content: center;
   gap: 2rem;
   padding: 5rem;
   margin-top: 5rem;
+  width: 100%;
 }
 
 .appointment {
@@ -61,4 +68,52 @@ p {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .appointment-home {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+    margin-top: 5rem;
+  }
+
+  .appointment {
+    width: 20rem;
+    height: 40vh;
+    border: 0.1rem solid #741188;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .appointment-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .appointment-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    margin-top: 5rem;
+  }
+
+  .appointment {
+    width: 100vw;
+    height: 40vh;
+    border: 0.1rem solid #741188;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+  }
 }

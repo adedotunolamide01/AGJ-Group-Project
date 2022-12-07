@@ -1,13 +1,13 @@
-import React from 'react';
-import './Nav.css';
-import { Link, useNavigate } from 'react-router-dom';
+import React from "react";
+import "./Nav.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const Patiencenav = (props) => {
   const navigate = useNavigate();
 
   return (
     <header className="main-header">
-      <h1>Health Management App</h1>
+      <h1>H M A</h1>
       <nav className="nav">
         <ul>
           <Link to="/patiencehome">
@@ -42,7 +42,7 @@ const Patiencenav = (props) => {
           </Link>
 
           <li>
-            <button onClick={() => navigate('/login')}>Logout</button>
+            <button onClick={() => navigate("/login")}>Logout</button>
           </li>
         </ul>
       </nav>

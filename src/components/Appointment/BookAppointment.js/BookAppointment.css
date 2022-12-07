@@ -2,6 +2,10 @@ p {
   font-weight: 500;
 }
 
+.booking-container {
+  margin: 5rem;
+}
+
 .booking-heading {
   text-align: center;
   padding-top: 5rem;
@@ -12,7 +16,6 @@ p {
 .form {
   display: flex;
   flex-direction: column;
-  padding: 5rem;
   width: 100%;
 }
 
@@ -57,6 +60,5 @@ label {
 
 .back-button {
   display: flex;
-  justify-content: flex-end;
-  margin: 5rem;
+  justify-content: center;
 }
