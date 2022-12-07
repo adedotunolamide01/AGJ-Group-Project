@@ -1,5 +1,6 @@
 import { useAuth } from './components/Context/authContext';
 import { Navigate } from 'react-router-dom';
+import './App.css';
 
 import Home from './components/Home/Home';
 
