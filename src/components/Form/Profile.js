@@ -57,10 +57,10 @@ const Profile = () => {
 
   //loading userpage
   useEffect(() => {
-    if (userProfile.status === 'doctor') {
+    if (getUserProfile.status === 'doctor') {
       navigate('/dochome');
     }
-  }, [userProfile, navigate]);
+  }, [getUserProfile, navigate]);
 
   useEffect(() => {
     if (!user & !userLoading) {
@@ -70,7 +70,7 @@ const Profile = () => {
 
   if (loading) return <div>loading...</div>;
 
-  if (user)
+  if (userProfile)
     return (
       <div className="history-details">
         <div className="create">
@@ -78,7 +78,7 @@ const Profile = () => {
         </div>
         <div>
           <h2>
-            <strong>Date: </strong> {userProfile.date}
+            <strong>Name: </strong> {userProfile.name}
           </h2>
           <p>
             <strong>Gender: </strong> {userProfile.gender}
@@ -87,23 +87,23 @@ const Profile = () => {
             <strong>Age: </strong> {userProfile.age}
           </p>
           <p>
-            <strong>Blood Group: </strong> {userProfile.bloodGroup}
+            <strong>Blood Group: </strong> {userProfile.bloodgroup}
           </p>
           <p>
             <strong>Address: </strong> {userProfile.address}
           </p>
           <p>
-            <strong>Blood Group: </strong> {userProfile.bloodGroup}
+            <strong>City: </strong> {userProfile.city}
           </p>
           <p>
-            <strong>Next of Kin Name: </strong> {userProfile.Next_of_kin_Name}
+            <strong>Next of Kin Name: </strong> {userProfile.nextofkinname}
           </p>
           <p>
-            <strong>Next of Kin Phone No: </strong>{' '}
-            {userProfile.Next_of_kin_phone_no}
+            <strong>Next of Kin Phone No: </strong>
+            {userProfile.nextofkinphone}
           </p>
           <p>
-            <strong>Phone No: </strong> {userProfile.phoneNumber}
+            <strong>Phone No: </strong> {userProfile.phoneno}
           </p>
           <p>
             <strong>Status: </strong> {userProfile.status}
@@ -111,134 +111,135 @@ const Profile = () => {
         </div>
       </div>
     );
-
-  return (
-    <div>
-      <div className={classes.mainheader}>
-        <Patiencenav />
-      </div>
-      <section>
-        <div className="register">
-          <div className="col-1">
-            <h2>Profile Sign Up</h2>
-            <span>register and enjoy the service</span>
-          </div>
-          <form id="form" className="flex flex-col" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              value={profile.name}
-              onChange={(e) => {
-                setProfile({
-                  name: e.target.value,
-                });
-              }}
-              placeholder="Full Name"
-            />
-
-            <select
-              value={profile.gender}
-              onChange={(e) => {
-                setProfile({
-                  gender: e.target.value,
-                });
-              }}
-            >
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-            </select>
-            <input
-              type="text"
-              value={profile.age}
-              onChange={(e) => {
-                setProfile({
-                  age: e.target.value,
-                });
-              }}
-              placeholder="Age"
-            />
-            <input
-              type="text"
-              value={profile.bloodGroup}
-              onChange={(e) => {
-                setProfile({
-                  bloodGroup: e.target.value,
-                });
-              }}
-              placeholder="Blood Group"
-            />
-            <input
-              type="text"
-              value={profile.city}
-              onChange={(e) => {
-                setProfile({
-                  city: e.target.value,
-                });
-              }}
-              placeholder="Enter City"
-            />
-            <input
-              type="text"
-              value={profile.address}
-              onChange={(e) => {
-                setProfile({
-                  address: e.target.value,
-                });
-              }}
-              placeholder="Address"
-            />
-            <input
-              type="text"
-              value={profile.phoneNumber}
-              onChange={(e) => {
-                setProfile({
-                  phoneNumber: e.target.value,
-                });
-              }}
-              placeholder="Phone number"
-            />
-            <input
-              type="text"
-              value={profile.Next_of_kin_Name}
-              onChange={(e) => {
-                setProfile({
-                  Next_of_kin_Name: e.target.value,
-                });
-              }}
-              placeholder="Enter your Next of Kin Name"
-            />
-            <input
-              type="text"
-              value={profile.Next_of_kin_phone_no}
-              onChange={(e) => {
-                setProfile({
-                  Next_of_kin_phone_no: e.target.value,
-                });
-              }}
-              placeholder="Enter your Next of Kin Phone No"
-            />
-
-            <select
-              value={profile.Status}
-              onChange={(e) => {
-                setProfile({
-                  Status: e.target.value,
-                });
-              }}
-            >
-              <option value="Patient">Patient</option>
-              <option value="Doctor">Doctor</option>
-            </select>
-
-            <button className="btn" onClick={() => navigate('/login')}>
-              Submit{' '}
-            </button>
-          </form>
-          <div className="col-2"></div>
-          <img className="regPics" src={bgImg} alt="" />
+  else {
+    return (
+      <div>
+        <div className={classes.mainheader}>
+          <Patiencenav />
         </div>
-      </section>
-    </div>
-  );
+        <section>
+          <div className="register">
+            <div className="col-1">
+              <h2>Profile Sign Up</h2>
+              <span>register and enjoy the service</span>
+            </div>
+            <form id="form" className="flex flex-col" onSubmit={handleSubmit}>
+              <input
+                type="text"
+                value={profile.name}
+                onChange={(e) => {
+                  setProfile({
+                    name: e.target.value,
+                  });
+                }}
+                placeholder="Full Name"
+              />
+
+              <select
+                value={profile.gender}
+                onChange={(e) => {
+                  setProfile({
+                    gender: e.target.value,
+                  });
+                }}
+              >
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+              <input
+                type="text"
+                value={profile.age}
+                onChange={(e) => {
+                  setProfile({
+                    age: e.target.value,
+                  });
+                }}
+                placeholder="Age"
+              />
+              <input
+                type="text"
+                value={profile.bloodGroup}
+                onChange={(e) => {
+                  setProfile({
+                    bloodGroup: e.target.value,
+                  });
+                }}
+                placeholder="Blood Group"
+              />
+              <input
+                type="text"
+                value={profile.city}
+                onChange={(e) => {
+                  setProfile({
+                    city: e.target.value,
+                  });
+                }}
+                placeholder="Enter City"
+              />
+              <input
+                type="text"
+                value={profile.address}
+                onChange={(e) => {
+                  setProfile({
+                    address: e.target.value,
+                  });
+                }}
+                placeholder="Address"
+              />
+              <input
+                type="text"
+                value={profile.phoneNumber}
+                onChange={(e) => {
+                  setProfile({
+                    phoneNumber: e.target.value,
+                  });
+                }}
+                placeholder="Phone number"
+              />
+              <input
+                type="text"
+                value={profile.Next_of_kin_Name}
+                onChange={(e) => {
+                  setProfile({
+                    Next_of_kin_Name: e.target.value,
+                  });
+                }}
+                placeholder="Enter your Next of Kin Name"
+              />
+              <input
+                type="text"
+                value={profile.Next_of_kin_phone_no}
+                onChange={(e) => {
+                  setProfile({
+                    Next_of_kin_phone_no: e.target.value,
+                  });
+                }}
+                placeholder="Enter your Next of Kin Phone No"
+              />
+
+              <select
+                value={profile.Status}
+                onChange={(e) => {
+                  setProfile({
+                    Status: e.target.value,
+                  });
+                }}
+              >
+                <option value="Patient">Patient</option>
+                <option value="Doctor">Doctor</option>
+              </select>
+
+              <button className="btn" onClick={() => navigate('/login')}>
+                Submit{' '}
+              </button>
+            </form>
+            <div className="col-2"></div>
+            <img className="regPics" src={bgImg} alt="" />
+          </div>
+        </section>
+      </div>
+    );
+  }
 };
 
 export default Profile;
