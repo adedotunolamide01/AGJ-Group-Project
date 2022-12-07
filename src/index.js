@@ -34,6 +34,7 @@ import DocHealthInformation from './components/HealthInformation/HealthInfoHomeP
 import DocDiabetes from './components/HealthInformation/Diabetes/DocDiabetes';
 import DocCancer from './components/HealthInformation/Cancer/DocCancer';
 import DocStroke from './components/HealthInformation/Stroke/DocStroke';
+import DocAppointmentHome from './components/Appointment/AppointmentHomePage/DocAppointmentHomePage';
 
 const router = createBrowserRouter([
   {
@@ -171,10 +172,10 @@ const router = createBrowserRouter([
   },
 
   {
-    path: '/docbookappointment',
+    path: '/docappointmenthome',
     element: (
       <RequiredAuth>
-        <HealthInformation />
+        <DocAppointmentHome />
       </RequiredAuth>
     ),
   },

@@ -4,11 +4,18 @@
 
 html {
   font-family: sans-serif;
+  background: #fff;
+}
+
+body {
+  margin: 0;
 }
 
 main {
   margin-top: 6rem;
 }
+
+/* css used later / list */ /*  previews / list */ /*  previews / list */ /*  previews / list */
 
 body {
   margin: 0;
@@ -17,6 +24,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");

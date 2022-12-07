@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * > * {
-  font-family: "Poppins", cursive;
+  font-family: 'Poppins', cursive;
   margin: auto;
 }
 body {
@@ -74,6 +74,12 @@ body {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   display: none;
+}
+
+.regPics {
+  width: 480px;
+  height: 100%;
+  margin-left: 100px;
 }
 @media screen and (min-width: 860px) {
   .register .col-2 img {
