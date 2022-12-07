@@ -1,7 +1,7 @@
-import './AppointmentHomePage.css';
-import { Link } from 'react-router-dom';
-import Patiencenav from '../../Navbar/Patiencenav';
-import Footer from '../../Footer/Footer';
+import "./AppointmentHomePage.css";
+import { Link } from "react-router-dom";
+import Patiencenav from "../../Navbar/Patiencenav";
+import Footer from "../../Footer/Footer";
 
 const AppointmentHome = () => {
   return (
@@ -34,7 +34,7 @@ const AppointmentHome = () => {
         </div>
       </div>
       <div className="appointment-button">
-        <Link>
+        <Link to="/patiencehome">
           <button className="btn">
             <svg
               className="appointment-back-svg"

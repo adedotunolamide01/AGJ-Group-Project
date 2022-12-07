@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.modal-background {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(235, 232, 232);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.close-btn {
+  display: inline-block;
+  justify-content: flex-end;
+}
+
+.close-modal {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-title {
+  font-size: 2rem;
+  font-weight: 500;
+  color: red;
+}
+
+.modal-body {
+  font-size: 1rem;
+}
+
+.modal-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.cancel-btn {
+  border: none;
+  background-color: grey;
+  color: white;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.modal-delete {
+  background-color: red;
+  padding: 0.5rem 0.9rem;
+  border: none;
+  color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+  width: 100%;
+}
