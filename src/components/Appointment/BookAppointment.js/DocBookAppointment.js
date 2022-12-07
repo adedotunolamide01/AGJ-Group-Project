@@ -1,12 +1,12 @@
-import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
-import NavDoctor from "../../Navbar/NavDoctor";
-import "./BookAppointment.css";
+import { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import NavDoctor from '../../Navbar/NavDoctor';
+import './BookAppointment.css';
 
-import "./BookAppointment.css";
+import './BookAppointment.css';
 
-const BookAppointment = () => {
-  const [reason, setReason] = useState("");
+const DocBookAppointment = () => {
+  const [reason, setReason] = useState('');
   const [apptDate, setApptDate] = useState(
     new Date().toISOString().substring(0, 10)
   );
@@ -18,17 +18,17 @@ const BookAppointment = () => {
     const datas = { reason, apptDate };
     setIsPending(true);
     fetch(`http://localhost:8001/datas`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
 
       body: JSON.stringify(datas),
     }).then(() => {
       setIsPending(false);
-      alert("Your booking has been sent successfully.");
-      navigate("/viewappointment");
+      alert('Your booking has been sent successfully.');
+      navigate('/viewappointment');
     });
 
-    setReason("");
+    setReason('');
     setApptDate(new Date().toISOString().substring(0, 10));
   };
 
@@ -91,4 +91,4 @@ const BookAppointment = () => {
   );
 };
 
-export default BookAppointment;
+export default DocBookAppointment;

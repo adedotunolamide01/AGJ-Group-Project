@@ -28,17 +28,23 @@ const Home = (props) => {
             <li>
               <h1>Doctor</h1>
             </li>
-            <img className="regPics" src={dcImg} alt="" />
+            <img className={classes.regPic} src={dcImg} alt="" />
+            <div className={classes.boardCopy}>
+              <p>Click here if you are a doctor</p>
+            </div>
           </Link>
         </Card>
         <Card className={classes.history}>
           <Link to="/patiencehome">
             <li>
               <h1>
-                <strong>Patience</strong>
+                <strong>Patient</strong>
               </h1>
             </li>
-            <img className="regPics" src={bgImg} alt="" />
+            <img className={classes.regPics} src={bgImg} alt="" />
+            <div className={classes.boardCop}>
+              <p>Click here if you are a Patient</p>
+            </div>
           </Link>
         </Card>
       </div>

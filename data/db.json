@@ -17,6 +17,15 @@
       "status": "Pending",
       "treatment": "Tablet Arthermeter 80/480 1-1",
       "id": 2
+    },
+    {
+      "date": "2022-12-06",
+      "complain": " Difficulty in breathing.",
+      "assement": "Upper respiratory tract infection ",
+      "issue": "other",
+      "treatment": "Pcm and LDEC",
+      "reset": "",
+      "id": 3
     }
   ]
 }

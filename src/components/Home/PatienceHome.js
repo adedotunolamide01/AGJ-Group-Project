@@ -1,15 +1,15 @@
-import React from "react";
-import Card from "../UI/Card/Card";
-import classes from "./Home.module.css";
-import { Link } from "react-router-dom";
-import { useAuth } from "../Context/authContext";
-import Footer from "../Footer/Footer";
-import aptImg from "./Icons/appointment.png";
-import pxImg from "./Icons/prescription.png";
-import infImg from "./Icons/information.png";
-import hisImg from "./Icons/history.png";
+import React from 'react';
+import Card from '../UI/Card/Card';
+import classes from './Home.module.css';
+import { Link } from 'react-router-dom';
+import { useAuth } from '../Context/authContext';
+import Footer from '../Footer/Footer';
+import aptImg from './Icons/appointment.png';
+import pxImg from './Icons/prescription.png';
+import infImg from './Icons/information.png';
+import hisImg from './Icons/history.png';
 
-import PatienceNav from "../Navbar/Patiencenav";
+import PatienceNav from '../Navbar/Patiencenav';
 
 const PatienceHome = (props) => {
   const { user } = useAuth();
@@ -20,9 +20,9 @@ const PatienceHome = (props) => {
       </div>
 
       <Card className={classes.home}>
-        <h1>Welcome back!</h1>
-        <br></br>
-        <strong>{user.email}</strong>
+        <h1>
+          <strong>{user.email}</strong>
+        </h1>
       </Card>
       <div className={classes.DashboardContentFlex}>
         <Card className={classes.history}>
@@ -32,7 +32,7 @@ const PatienceHome = (props) => {
                 <h1>Medical History</h1>
               </a>
             </li>
-            <img className="regPics" src={hisImg} alt="" />
+            <img className={classes.regPics} src={hisImg} alt="" />
           </Link>
         </Card>
         <Card className={classes.appointment}>
@@ -42,7 +42,7 @@ const PatienceHome = (props) => {
                 <h1>Appointment</h1>
               </a>
             </li>
-            <img className="regPics" src={aptImg} alt="" />
+            <img className={classes.regPics} src={aptImg} alt="" />
           </Link>
         </Card>
         <Card className={classes.Prescription}>
@@ -52,7 +52,7 @@ const PatienceHome = (props) => {
                 <h1>View Prescription</h1>
               </a>
             </li>
-            <img className="regPics" src={pxImg} alt="" />
+            <img className={classes.regPics} src={pxImg} alt="" />
           </Link>
         </Card>
         <Card className={classes.information}>
@@ -62,7 +62,7 @@ const PatienceHome = (props) => {
                 <h1>Health Information</h1>
               </a>
             </li>
-            <img className="regPics" src={infImg} alt="" />
+            <img className={classes.regPics} src={infImg} alt="" />
           </Link>
         </Card>
       </div>
