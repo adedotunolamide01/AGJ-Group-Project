@@ -4,7 +4,9 @@
   margin: 2rem auto;
   padding: 2rem;
 }
-
+.click {
+  color: #4f005f;
+}
 .control {
   margin: 1rem 0;
   display: flex;
