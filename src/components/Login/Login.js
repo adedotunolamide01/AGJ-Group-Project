@@ -108,7 +108,7 @@ const Login = () => {
             <p>
               Still not have account?
               <Link to="/signup">
-                <strong> Click Create New Account</strong>
+                <b className={classes.click}> Click Create New Account</b>
               </Link>
             </p>
           </div>

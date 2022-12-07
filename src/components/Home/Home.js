@@ -20,6 +20,7 @@ const Home = (props) => {
       <Card className={classes.home}>
         <h1>Welcome back!</h1>
         <br></br>
+
         <strong>{user.email}</strong>
       </Card>
       <div className={classes.DashboardContentFlex}>
